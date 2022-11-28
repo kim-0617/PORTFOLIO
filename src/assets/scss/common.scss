@@ -1,3 +1,8 @@
+canvas {
+  position: absolute;
+  z-index: 1000;
+}
+
 /* 간격 셋팅 */
 .mb0 {
   margin-bottom: 0 !important;

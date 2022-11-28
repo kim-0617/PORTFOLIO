@@ -1,8 +1,10 @@
 import React from 'react';
+import { Ball } from './'
 
 function Intro() {
   return (
     <section id="intro">
+      <Ball />
       <div className="intro__inner">
         <h2>
           PORT <br />
