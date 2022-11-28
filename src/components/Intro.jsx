@@ -5,8 +5,8 @@ function Intro() {
     <section id="intro">
       <div className="intro__inner">
         <h2>
-          <p className="intro__top">PORT</p>
-          <p className="intro__bot">FOLIO</p>
+          PORT <br />
+          FOLIO
         </h2>
       </div>
 

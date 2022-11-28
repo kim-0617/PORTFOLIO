@@ -1,10 +1,11 @@
 import React from 'react';
-import { Intro } from '../components';
+import { Intro, About } from '../components';
 
 function Main() {
   return (
     <main id="main">
       <Intro />
+      <About />
     </main>
   );
 }
