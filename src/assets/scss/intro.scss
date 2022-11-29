@@ -18,146 +18,65 @@
       font-family: var(--font2);
       font-size: 19vw;
       line-height: 1;
-      div {
-        display: inline-block;
+    }
+
+    .myImg {
+      position: absolute;
+      width: 33vw;
+      height: auto;
+      transform: translate(20vw, 10vw);
+      z-index: 2;
+      img {
+        display: block;
       }
     }
-  }
 
-  .intro__imgs {
-    img {
-      display: block;
-      position: absolute;
-      width: 35vw;
-      right: 5vw;
-      bottom: -7vw;
-      z-index: 2;
-    }
-
-    .left__top {
-      background: url('../img/360.svg') no-repeat center / cover;
-      width: 18vw;
-      height: 18vw;
-      position: absolute;
-      left: -4%;
-      top: -6%;
-    }
-    .left__mid {
-      background: url('../img/140.svg') no-repeat center / cover;
-      width: 9vw;
-      height: 9vw;
-      position: absolute;
-      left: 12%;
-      top: 56%;
-    }
-    .center__mid {
-      background: url('../img/292.svg') no-repeat center / cover;
-      width: 15vw;
-      height: 15vw;
-      position: absolute;
-      right: 24%;
-      top: 15%;
-      z-index: 1;
-    }
-    .center__right {
-      background: url('../img/105.svg') no-repeat center / cover;
-      width: 7vw;
-      height: 7vw;
-      position: absolute;
-      right: 10%;
-      top: 18%;
-    }
     .paint {
       background: url('../img/paint.png') no-repeat center / cover;
-      width: 12vw;
-      height: 12vw;
+      width: 11vw;
+      height: 11vw;
       position: absolute;
-      left: 30%;
-      top: 25%;
+      transform: translate(-17vw, -17vw) !important;
       z-index: 3;
     }
+
     .pocket {
       background: url('../img/pocket.png') no-repeat center / cover;
       width: 11vw;
       height: 11vw;
       position: absolute;
-      left: 42%;
-      bottom: 18%;
+      transform: translate(-2vw, 13vw) !important;
       z-index: 3;
     }
   }
 }
 
-@media (max-width: 1220px) {
-  #intro {
-    .intro__imgs {
-      img {
-        bottom: 1%;
-      }
-      .left__mid {
-        left: 10%;
-        top: 55%;
-      }
-      .center__mid {
-        right: 20%;
-        top: 25%;
-      }
-      .center__right {
-        top: 30%;
-        right: 7%;
-      }
-      .paint {
-        top: 31%;
-      }
-      .pocket {
-        bottom: 25%;
-      }
-    }
-  }
-}
+// @media (max-width: 1220px) {
+//   #intro {
+//     .intro__inner {
+//       .myImg {
+//         transform: translate(15vw, 10vw) !important;
+//       }
+//     }
+//   }
+// }
 
-@media (max-width: 768px) {
-  #intro {
-    .intro__imgs {
-      img {
-        bottom: 18%;
-      }
-      .left__top {
-        left: -6%;
-        top: -6%;
-      }
-      .left__mid {
-        left: 8%;
-        top: 54%;
-      }
-      .center__mid {
-        right: 19%;
-        top: 32%;
-      }
-      .paint {
-        top: 40%;
-      }
-      .pocket {
-        bottom: 34%;
-      }
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   #intro {
+//     .intro__inner {
+//       .myImg {
+//         transform: translate(15vw, 10vw) !important;
+//       }
+//     }
+//   }
+// }
 
-@media (max-width: 468px) {
-  #intro {
-    .intro__imgs {
-      img {
-        bottom: 26%;
-      }
-      .left__top {
-        left: -10%;
-        top: -5%;
-      }
-      .left__mid {
-        left: 5%;
-        top: 52%;
-      }
-    }
-  }
-}
+// @media (max-width: 468px) {
+//   #intro {
+//     .intro__inner {
+//       .myImg {
+//         transform: translate(15vw, 9vw) !important;
+//       }
+//     }
+//   }
+// }
