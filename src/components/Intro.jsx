@@ -15,6 +15,23 @@ function Intro() {
   const secondTarget = useRef(null);
   const thirdTarget = useRef(null);
 
+  const imgMove = (e) => {
+    // 마우스 좌표 값
+    let mousePageX = e.pageX;
+    let mousePageY = e.pageY;
+
+    // 마우스 좌표 값 가운데로 초기화
+    // 전체길이 / 2 - 마우스 좌표 값 === 0
+    let centerPageX = window.innerWidth / 2 - mousePageX;
+    let centerPageY = window.innerHeight / 2 - mousePageY;
+
+    gsap.to(e.target, {
+      duration: 0.3,
+      x: centerPageX * -0.2,
+      y: centerPageY * -0.2,
+    });
+  }
+
   useEffect(() => {
     gsap.set(firstTarget.current, { top: 50, opacity: 0 });
     gsap.set(secondTarget.current, { left: 30, top: 30, opacity: 0 });
@@ -33,6 +50,7 @@ function Intro() {
     setTimeout(() => {
       setIsDown(false);
     }, 4000);
+
   }, []);
 
   useEffect(() => {
@@ -89,8 +107,8 @@ function Intro() {
             {/* <span>PORT</span>
           <span>FOLIO</span> */}
           </h2>
-          <div className="myImg" ref={thirdTarget}>
-            <img src="image/intro.png" alt="메인페이지 사진입니다." />
+          <div className="myImg" ref={thirdTarget} >
+            <img src="image/intro.png" alt="메인페이지 사진입니다." onMouseMove={imgMove} />
           </div>
           <div className="paint" ref={secondTarget}>
             <span className="ir">물감통그림</span>
