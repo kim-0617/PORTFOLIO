@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { Ball } from './';
+import React, { useEffect, useRef, useState } from 'react';
+import { Ball, BallDown } from './';
 import gsap from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
@@ -7,6 +7,7 @@ import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 gsap.registerPlugin(MotionPathPlugin, TextPlugin);
 
 function Intro() {
+  const [isDown, setIsDown] = useState(true);
   const tl = gsap.timeline();
   const titleRef = useRef(null);
 
@@ -14,7 +15,6 @@ function Intro() {
   const secondTarget = useRef(null);
   const thirdTarget = useRef(null);
 
-  // .to(firstTarget.current, 0.5, { , opacity: 1 });
   useEffect(() => {
     gsap.set(firstTarget.current, { top: 50, opacity: 0 });
     gsap.set(secondTarget.current, { left: 30, top: 30, opacity: 0 });
@@ -29,6 +29,10 @@ function Intro() {
           opacity: 1,
         });
     }, 2000);
+
+    setTimeout(() => {
+      setIsDown(false);
+    }, 4000);
   }, []);
 
   useEffect(() => {
@@ -76,26 +80,27 @@ function Intro() {
   }, []);
 
   return (
-    <section id="intro">
-      <Ball />
-      <div className="intro__inner">
-        <h2 ref={titleRef} id="main__title">
-          {/* PORT <br /> FOLIO */}
-          {/* <span>PORT</span>
+    <>
+      <section id="intro">
+        {isDown ? <BallDown /> : <Ball />}
+        <div className="intro__inner">
+          <h2 ref={titleRef} id="main__title">
+            {/* PORT <br /> FOLIO */}
+            {/* <span>PORT</span>
           <span>FOLIO</span> */}
-        </h2>
-        <div className="myImg" ref={thirdTarget}>
-          <img src="image/intro.png" alt="메인페이지 사진입니다." />
+          </h2>
+          <div className="myImg" ref={thirdTarget}>
+            <img src="image/intro.png" alt="메인페이지 사진입니다." />
+          </div>
+          <div className="paint" ref={secondTarget}>
+            <span className="ir">물감통그림</span>
+          </div>
+          <div className="pocket" ref={firstTarget}>
+            <span className="ir">주머니 그림</span>
+          </div>
         </div>
-        <div className="paint" ref={secondTarget}>
-          <span className="ir">물감통그림</span>
-        </div>
-        <div className="pocket" ref={firstTarget}>
-          <span className="ir">주머니 그림</span>
-        </div>
-      </div>
 
-      {/* <div className="intro__imgs">
+        {/* <div className="intro__imgs">
         <div className="left__top">
           <span className="ir">왼쪽 위 사각형 데코레이션</span>
         </div>
@@ -109,7 +114,8 @@ function Intro() {
           <span className="ir">가운데 오른쪽 원 데코레이션</span>
         </div>
       </div> */}
-    </section>
+      </section>
+    </>
   );
 }
 

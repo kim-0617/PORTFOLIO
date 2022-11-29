@@ -53,8 +53,8 @@ function Ball() {
         var canvas = document.getElementById('canvas'),
             context = canvas.getContext('2d'),
             balls = [],
-            numBalls = 25,
-            bounce = -0.4,
+            numBalls = 35,
+            bounce = -0.7,
             gravity = 0;
 
         canvas.width = innerWidth
@@ -64,10 +64,14 @@ function Ball() {
             radius = Math.random() * 20 + 15;
             ball = new Ball(radius, "transparent");
             ball.mass = radius;
-            ball.x = Math.random() * canvas.width;
-            ball.y = Math.random() * canvas.height;
-            ball.vx = Math.random() * 10 - 5;
-            ball.vy = Math.random() * 10 - 5;
+            // ball.x = Math.random() * canvas.width;
+            // ball.y = Math.random() * canvas.height;
+            // ball.vx = Math.random() * 10 - 5;
+            // ball.vy = Math.random() * 10 - 5;
+            ball.x = 0;
+            ball.y = 0;
+            ball.vx = 100;
+            ball.vy = 100;
             balls.push(ball);
         }
 
