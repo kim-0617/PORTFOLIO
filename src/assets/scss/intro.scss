@@ -27,9 +27,10 @@
 
     .myImg {
       position: absolute;
-      width: 33vw;
+      width: 34vw;
       height: auto;
-      transform: translate(20vw, 10vw) !important;
+      transform: translate(25vw, 10vw) !important;
+      bottom: -2vw;
       z-index: 2;
       img {
         display: block;
@@ -37,7 +38,7 @@
     }
 
     .paint {
-      background: url('../img/paint.png') no-repeat center / cover;
+      background: url('../image/paint.png') no-repeat center / cover;
       width: 11vw;
       height: 11vw;
       position: absolute;
@@ -46,7 +47,7 @@
     }
 
     .pocket {
-      background: url('../img/pocket.png') no-repeat center / cover;
+      background: url('../image/pocket.png') no-repeat center / cover;
       width: 11vw;
       height: 11vw;
       position: absolute;
@@ -56,33 +57,37 @@
   }
 }
 
-// @media (max-width: 1220px) {
-//   #intro {
-//     .intro__inner {
-//       .myImg {
-//         transform: translate(15vw, 10vw) !important;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   #intro {
-//     .intro__inner {
-//       .myImg {
-//         transform: translate(15vw, 10vw) !important;
-//       }
-//     }
-//   }
-// }
-
-@media (max-width: 468px) {
+@media (max-width: 1220px) {
   #intro {
     .intro__inner {
       .myImg {
-        width: 85vw;
-        bottom: -6vw;
-        right: -22vw !important;
+        width: 45vw;
+        bottom: 2vw;
+        right: -2vw !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #intro {
+    .intro__inner {
+      .myImg {
+        width: 60vw;
+        bottom: -1vw;
+        right: -20vw !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 486px) {
+  #intro {
+    .intro__inner {
+      .myImg {
+        width: 87vw;
+        bottom: -12vw;
+        right: -35vw !important;
       }
     }
   }

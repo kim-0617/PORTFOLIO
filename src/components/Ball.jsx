@@ -57,7 +57,7 @@ function Ball() {
     var canvas = document.getElementById('canvas'),
       context = canvas.getContext('2d'),
       balls = [],
-      numBalls = 35,
+      numBalls = window.innerWidth > 900 ? 35 : 15,
       bounce = -0.7,
       gravity = 0;
 

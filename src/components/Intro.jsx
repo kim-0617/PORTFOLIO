@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Ball, BallDown } from './';
+import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollSmoother from 'gsap-trial/ScrollSmoother';
+import { Ball, BallDown } from './';
 import { TextPlugin } from 'gsap/TextPlugin';
 
-gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollSmoother);
 
 function Intro() {
   const [isDown, setIsDown] = useState(true);
@@ -15,9 +17,10 @@ function Intro() {
 
   const firstTarget = useRef(null);
   const secondTarget = useRef(null);
-  const secondTargetChild = useRef(null);
   const thirdTarget = useRef(null);
   const thirdTargetChild = useRef(null);
+
+  const sectionRef = useRef(null);
 
   const imgMove = (e) => {
     // 마우스 좌표 값
@@ -29,16 +32,16 @@ function Intro() {
     let centerPageX = window.innerWidth / 2 - mousePageX;
     let centerPageY = window.innerHeight / 2 - mousePageY;
 
-    gsap.to(document.body, {
+    gsap.to(sectionRef.current, {
       duration: 1,
-      x: centerPageX * -0.01,
+      x: centerPageX * -0.009,
       y: centerPageY * -0.01,
       ease: 'power4.out',
     });
 
     gsap.to(thirdTargetChild.current, {
       duration: 0.5,
-      x: centerPageX * 0.1,
+      x: centerPageX * 0.09,
       y: centerPageY * 0.09,
       ease: 'power1.out',
     });
@@ -53,7 +56,7 @@ function Intro() {
     gsap.set(lastRef.current, { opacity: 0, y: 50 });
     gsap.set(firstTarget.current, { top: '45%', opacity: 0 }); // 주머니
     gsap.set(secondTarget.current, { left: '34%', top: '45%', opacity: 0 }); // 물감통
-    gsap.set(thirdTarget.current, { right: -300, opacity: 0, rotate: 140 }); // 핸드폰
+    gsap.set(thirdTarget.current, { right: -100, opacity: 0, rotate: 140 }); // 핸드폰
 
     setTimeout(() => {
       setIsDown(false);
@@ -61,19 +64,12 @@ function Intro() {
     }, 2500);
 
     setTimeout(() => {
-      tl.to(firstRef.current, {
+      tl.to([firstRef.current, lastRef.current], {
         duration: 0.7,
         opacity: 1,
         y: 0,
-        ease: 'power3.in',
+        ease: 'power3.out',
       })
-        .to(lastRef.current, {
-          duration: 0.7,
-          y: 0,
-          opacity: 1,
-          delay: 0.3,
-          ease: 'power3.in',
-        })
         .to(firstTarget.current, 0.5, { top: 'auto', opacity: 1, ease: 'power4.in' })
         .to(secondTarget.current, 0.5, { top: 'auto', left: 'auto', opacity: 1, ease: 'slow(0.7, 0.7, false)' })
         .to(thirdTarget.current, 0.5, {
@@ -87,7 +83,7 @@ function Intro() {
 
   return (
     <>
-      <section id="intro">
+      <section id="intro" onMouseMove={imgMove} ref={sectionRef}>
         {isDown ? <BallDown /> : null}
         <Ball />
         <div className="intro__inner">
@@ -96,7 +92,7 @@ function Intro() {
             <span ref={lastRef}>FOLIO</span>
           </h2>
           <div className="myImg" ref={thirdTarget}>
-            <img src="image/intro.png" alt="메인페이지 사진입니다." onMouseMove={imgMove} ref={thirdTargetChild} />
+            <img src="image/intro.png" alt="메인페이지 사진입니다." ref={thirdTargetChild} />
           </div>
           <div className="paint" ref={secondTarget}>
             <span className="ir">물감통그림</span>
