@@ -32,13 +32,6 @@ function Intro() {
     let centerPageX = window.innerWidth / 2 - mousePageX;
     let centerPageY = window.innerHeight / 2 - mousePageY;
 
-    // gsap.to(sectionRef.current, {
-    //   duration: 1,
-    //   x: centerPageX * -0.009,
-    //   y: centerPageY * -0.01,
-    //   ease: 'power4.out',
-    // });
-
     gsap.to(thirdTargetChild.current, {
       duration: 0.5,
       x: centerPageX * 0.09,

@@ -1,10 +1,9 @@
 import { Intro, About, Focus, Skill } from '../components';
-import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger,);
 
 function Main() {
   useEffect(() => {
