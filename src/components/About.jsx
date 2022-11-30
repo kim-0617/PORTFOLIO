@@ -6,17 +6,6 @@ import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function About() {
-  useEffect(() => {
-    gsap.utils.toArray('section').forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: 'top top',
-        pin: true,
-        pinSpacing: false,
-      });
-    });
-  }, []);
-
   return (
     <section id="about">
       <div className="about__inner">
