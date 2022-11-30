@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 import { Ball, BallDown } from './';
 import { TextPlugin } from 'gsap/TextPlugin';
 
-gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 function Intro() {
   const [isDown, setIsDown] = useState(true);
