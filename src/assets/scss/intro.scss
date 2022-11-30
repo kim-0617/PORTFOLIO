@@ -18,13 +18,18 @@
       font-family: var(--font2);
       font-size: 19vw;
       line-height: 1;
+      user-select: none;
+
+      > span {
+        display: block;
+      }
     }
 
     .myImg {
       position: absolute;
       width: 33vw;
       height: auto;
-      transform: translate(20vw, 10vw);
+      transform: translate(20vw, 10vw) !important;
       z-index: 2;
       img {
         display: block;
@@ -71,12 +76,14 @@
 //   }
 // }
 
-// @media (max-width: 468px) {
-//   #intro {
-//     .intro__inner {
-//       .myImg {
-//         transform: translate(15vw, 9vw) !important;
-//       }
-//     }
-//   }
-// }
+@media (max-width: 468px) {
+  #intro {
+    .intro__inner {
+      .myImg {
+        width: 85vw;
+        bottom: -6vw;
+        right: -22vw !important;
+      }
+    }
+  }
+}

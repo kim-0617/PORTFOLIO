@@ -7,7 +7,7 @@ function Header() {
   useEffect(() => {
     setTimeout(() => {
       gsap.to(tweenTarget.current, 0.5, { x: 10, opacity: 1 });
-    }, 3500);
+    }, 6500);
   }, []);
 
   return (
