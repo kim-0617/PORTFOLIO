@@ -26,11 +26,14 @@
     }
 
     .myImg {
+      // transform: translate(25vw, 10vw) !important;
       position: absolute;
-      width: 34vw;
-      height: auto;
-      transform: translate(25vw, 10vw) !important;
-      bottom: -2vw;
+      right: -30vw !important;
+      bottom: 12vw;
+      width: 35vw;
+      height: 20vw;
+      background-size: contain;
+      transform-origin: bottom right;
       z-index: 2;
       img {
         display: block;
@@ -57,37 +60,104 @@
   }
 }
 
-@media (max-width: 1220px) {
+// @media (max-width: 1220px) {
+//   #intro {
+//     .intro__inner {
+//       .myImg {
+//         width: 40vw;
+//         bottom: 2vw;
+//         right: -7vw !important;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   #intro {
+//     .intro__inner {
+//       .myImg {
+//         width: 60vw;
+//         bottom: -5vw;
+//         right: -25vw !important;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 486px) {
+//   #intro {
+//     .intro__inner {
+//       h2 {
+//         margin-bottom: 50px;
+//       }
+//       .myImg {
+//         width: 75vw;
+//         bottom: -12vw;
+//         right: -35vw !important;
+//       }
+//       .paint {
+//         transform: translate(-17vw, -24vw) !important;
+//       }
+
+//       .pocket {
+//         transform: translate(-2vw, 9vw) !important;
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 1080px) {
   #intro {
+    height: 100vh;
     .intro__inner {
       .myImg {
-        width: 45vw;
-        bottom: 2vw;
-        right: -2vw !important;
+        width: 50vw;
+        height: 30vh;
+        bottom: 18vw;
+        right: -43vw !important;
+        background-position: right bottom -10vh;
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   #intro {
+    height: 100vh;
     .intro__inner {
       .myImg {
-        width: 60vw;
-        bottom: -1vw;
-        right: -20vw !important;
+        width: 55vw;
+        height: 20vh;
+        bottom: 22vw;
+        right: -43vw !important;
       }
     }
   }
 }
 
-@media (max-width: 486px) {
+@media (max-width: 600px) {
   #intro {
+    height: 100vh;
     .intro__inner {
       .myImg {
-        width: 87vw;
-        bottom: -12vw;
-        right: -35vw !important;
+        width: 65vw;
+        height: 20vh;
+        bottom: 16vw;
+        right: -43vw !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  #intro {
+    height: 100vh;
+    .intro__inner {
+      .myImg {
+        width: 75vw;
+        height: 22vh;
+        bottom: 16vw;
+        right: -43vw !important;
       }
     }
   }

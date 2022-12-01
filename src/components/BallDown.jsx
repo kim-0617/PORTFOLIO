@@ -17,7 +17,8 @@ function BallDown() {
         this.dx = dx;
         this.dy = dy;
         this.r = r;
-        this.color = 'hsl(' + Math.random() * 360 + ',90%,50%)';
+        // this.color = 'hsl(' + Math.random() * 360 + ',90%,50%)';
+        this.color = '#fafafa';
       }
 
       draw() {
