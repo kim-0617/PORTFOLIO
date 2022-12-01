@@ -47,8 +47,8 @@ function Intro() {
     gsap.set(firstRef.current, { opacity: 0, y: -50 });
     gsap.set(lastRef.current, { opacity: 0, y: 50 });
     gsap.set(firstTarget.current, { top: '45%', opacity: 0 }); // 주머니
-    gsap.set(secondTarget.current, { left: '34%', top: '45%', opacity: 0 }); // 물감통
-    gsap.set(thirdTarget.current, { right: -100, opacity: 0, rotate: 140 }); // 핸드폰
+    gsap.set(secondTarget.current, { top: '35%', opacity: 0 }); // 물감통
+    gsap.set(thirdTarget.current, { right: -300, opacity: 0, rotate: 140 }); // 핸드폰
 
     setTimeout(() => {
       setIsDown(false);
@@ -62,9 +62,12 @@ function Intro() {
         y: 0,
         ease: 'power3.out',
       })
-        .to(firstTarget.current, 0.5, { top: 'auto', opacity: 1, ease: 'power4.in' })
-        .to(secondTarget.current, 0.5, { top: 'auto', left: 'auto', opacity: 1, ease: 'slow(0.7, 0.7, false)' })
-        .to(thirdTarget.current, 0.5, {
+        .to([firstTarget.current, secondTarget.current], 0.7, {
+          top: 'auto',
+          opacity: 1,
+          ease: 'slow(0.7, 0.7, false)',
+        })
+        .to(thirdTarget.current, 1.2, {
           right: 0,
           rotate: 0,
           opacity: 1,
