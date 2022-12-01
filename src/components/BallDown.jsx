@@ -152,7 +152,7 @@ function BallDown() {
 
   return (
     <>
-      <canvas width="1920px" height="1080px"></canvas>
+      <canvas width="1920px" height="1080px" id="Dcanvas"></canvas>
     </>
   );
 }

@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Ball, BallDown } from './';
-import { TextPlugin } from 'gsap/TextPlugin';
-
-gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 function Intro() {
   const [isDown, setIsDown] = useState(true);

@@ -7,18 +7,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
   useEffect(() => {
-    gsap.utils.toArray('section').forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: 'top top',
-        pin: true,
-        pinSpacing: false,
-      });
+    ScrollTrigger.create({
+      trigger: '#intro',
+      start: 'top top',
+      pin: true,
+      pinSpacing: false,
     });
 
-    ScrollTrigger.create({
-      snap: 0.332
-    });
+    // ScrollTrigger.create({
+    //   trigger: '#about',
+    //   start: 'top top',
+    //   pin: true,
+    //   pinSpacing: false,
+    // });
+
+    // ScrollTrigger.create({
+    //   snap: 0.332,
+    // });
   }, []);
 
   return (
@@ -26,8 +31,6 @@ function Main() {
       <div>
         <Intro />
         <About />
-        <Focus />
-        <Skill />
       </div>
     </main>
   );

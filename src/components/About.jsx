@@ -1,33 +1,30 @@
-import React, { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { AboutIntro, Focus, Skill } from './';
+import { useRef, useState, useEffect } from 'react';
 
 function About() {
+  const aboutRef = useRef(null);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY >= aboutRef.current.offsetTop - window.innerHeight / 3) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
   return (
-    <section id="about">
-      <div className="about__inner">
-        <h2>ABOUT</h2>
-        <div className="aImg">
-          <img src="image/about.png" alt="어바웃페이지 사진입니다." />
-        </div>
-        <div className="calc">
-          <span className="ir">계산기그림</span>
-        </div>
-        <div className="date">
-          <span className="ir">달력그림</span>
-        </div>
-        <div className="tworec">
-          <span className="ir">이중사각형</span>
-        </div>
-        <div className="rec">
-          <span className="ir">사각형</span>
-        </div>
-        <div className="twocir">
-          <span className="ir">이중사각형</span>
-        </div>
-      </div>
+    <section id="about" ref={aboutRef}>
+      <AboutIntro scroll={scroll} />
+      <Focus />
+      <Skill />
     </section>
   );
 }
