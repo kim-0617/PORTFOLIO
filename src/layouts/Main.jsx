@@ -10,7 +10,8 @@ function Main() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (isLoading) return;
+    // if (isLoading) return;
+
     ScrollTrigger.create({
       trigger: '#intro',
       start: 'top top',
@@ -18,16 +19,16 @@ function Main() {
       pinSpacing: false,
     });
 
+    // ScrollTrigger.create({
+    //   trigger: '#about',
+    //   start: 'bottom bottom',
+    //   pin: true,
+    //   pinSpacing: false,
+    // });
+
     ScrollTrigger.create({
       trigger: '#about',
       start: 'bottom bottom',
-      pin: true,
-      pinSpacing: false,
-    });
-
-    ScrollTrigger.create({
-      trigger: '#coding',
-      start: 'bottom top',
       pin: true,
       pinSpacing: false,
     });
