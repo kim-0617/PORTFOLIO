@@ -3,6 +3,7 @@
   position: relative;
 
   #aboutIntro {
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     background-color: var(--background3);
@@ -57,25 +58,46 @@
   #focus {
     width: 100%;
     height: 100vh;
+    padding-bottom: 60vw;
     background: var(--background1);
     color: var(--font-color1);
     h2 {
       font-family: var(--font2);
       text-align: center;
-      font-size: 5vw;
-      padding-top: 3.5vw;
+      font-size: 8.5vw;
+      line-height: 1;
+      padding-top: 5vw;
+      margin-bottom: 7vw;
     }
 
     .focus__inner {
+      width: 70%;
+      margin: 0 auto;
       display: flex;
+      align-items: center;
+      justify-content: center;
       > img {
-        width: 18vw;
         display: block;
+        width: 32vw;
+        margin-right: 5%;
       }
-      .focus__conts__detail {
-        h3 {
-        }
-        p {
+      .focus__conts {
+        width: 45%;
+
+        .focus__conts__detail {
+          color: var(--font-color1);
+          font-family: var(--font1);
+          margin-bottom: 1.9vw;
+          h3 {
+            font-size: 1.355vw;
+            font-weight: 800;
+            line-height: 1.4;
+          }
+          p {
+            font-size: 1.35vw;
+            font-weight: normal;
+            line-height: 1.5;
+          }
         }
       }
     }
@@ -83,10 +105,88 @@
 
   #skill {
     width: 100%;
-    height: 100vh;
     background: var(--background1);
     color: var(--font-color3);
+
+    h2 {
+      text-align: center;
+      font-size: 8vw;
+      font-family: var(--font2);
+      padding-top: 8vw;
+      margin-bottom: 5vw;
+    }
     .skill__inner {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 70%;
+      .skill__title {
+        font-family: var(--font1);
+        font-weight: 400;
+        font-size: 1.15vw;
+        width: 40%;
+        margin-right: 5%;
+        line-height: 1.55;
+      }
+
+      .skill__conts {
+        width: 55%;
+        margin-bottom: 4.5vw;
+        font-family: var(--font1);
+        .skill__conts__detail {
+          display: flex;
+          border-top: 1px solid var(--font-color3);
+          padding: 1.5vw 0;
+          font-size: 1.15vw;
+          word-break: keep-all;
+
+          .skill__conts__detail__title {
+            width: 20%;
+            margin-right: 20%;
+          }
+
+          .skill__conts__detail__desc {
+            width: 45%;
+            word-break: keep-all;
+            line-height: 1.5;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid var(--font-color3);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 686px) {
+  #about {
+    #focus {
+      .focus__inner {
+        width: 70%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        > img {
+          width: 60%;
+          margin-bottom: 7vw;
+        }
+        .focus__conts {
+          width: 100%;
+
+          .focus__conts__detail {
+            h3 {
+              text-align: center;
+              margin-bottom: 5px;
+            }
+            p {
+              margin: 0 auto;
+              width: 65%;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
     }
   }
 }

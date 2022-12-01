@@ -1,11 +1,24 @@
+#main {
+  overflow: hidden;
+}
+
+.canvas__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+
+  #Dcanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 140vh;
+  }
+}
+
 canvas {
   position: absolute;
   z-index: 1;
-}
-
-#Dcanvas {
-  height: 120vh;
-  overflow: hidden;
 }
 
 /* 간격 셋팅 */

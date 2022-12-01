@@ -1,6 +1,4 @@
 #intro {
-  width: 100%;
-  height: 100vh;
   background-color: var(--background2);
   display: flex;
   justify-content: center;
@@ -8,6 +6,8 @@
   position: relative;
 
   .intro__inner {
+    width: 100%;
+    height: 100vh;
     position: relative;
     z-index: 2;
     display: flex;
@@ -29,7 +29,7 @@
     .myImg {
       // transform: translate(25vw, 10vw) !important;
       position: absolute;
-      right: -30vw !important;
+      right: 5vw !important;
       bottom: 12vw !important;
       width: 35vw;
       height: 20vw;
@@ -115,7 +115,7 @@
         width: 50vw;
         height: 30vh;
         bottom: 18vw !important;
-        right: -43vw !important;
+        right: -10vw !important;
         background-position: right bottom -10vh;
       }
     }
@@ -129,8 +129,8 @@
       .myImg {
         width: 55vw;
         height: 20vh;
-        bottom: 22vw !important;
-        right: -43vw !important;
+        bottom: 30vw !important;
+        right: -10vw !important;
       }
     }
   }
@@ -142,9 +142,9 @@
     .intro__inner {
       .myImg {
         width: 65vw;
-        height: 20vh;
+        height: 24vh;
         bottom: 16vw !important;
-        right: -43vw !important;
+        right: -13vw !important;
       }
     }
   }
@@ -158,7 +158,7 @@
         width: 75vw;
         height: 25vh;
         bottom: 16vw;
-        right: -60vw !important;
+        right: -10vw !important;
       }
     }
   }

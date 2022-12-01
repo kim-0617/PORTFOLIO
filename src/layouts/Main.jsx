@@ -1,4 +1,4 @@
-import { Intro, About } from '../components';
+import { Intro, About, Coding } from '../sections';
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,7 +7,7 @@ import { Loader } from '../others';
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isLoading) return;
@@ -18,12 +18,19 @@ function Main() {
       pinSpacing: false,
     });
 
-    // ScrollTrigger.create({
-    //   trigger: '#about',
-    //   start: 'top top',
-    //   pin: true,
-    //   pinSpacing: false,
-    // });
+    ScrollTrigger.create({
+      trigger: '#about',
+      start: 'bottom bottom',
+      pin: true,
+      pinSpacing: false,
+    });
+
+    ScrollTrigger.create({
+      trigger: '#coding',
+      start: 'bottom top',
+      pin: true,
+      pinSpacing: false,
+    });
 
     // ScrollTrigger.create({
     //   snap: 0.332,
@@ -38,6 +45,7 @@ function Main() {
         <>
           <Intro />
           <About />
+          <Coding />
         </>
       )}
     </main>

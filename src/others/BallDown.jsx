@@ -149,14 +149,16 @@ function BallDown() {
       ballB.y += (1 / ballB.r) * correction[1];
     }
 
-    // return () => {
-    //   canvas.remove();
-    // };
+    return () => {
+      canvas.remove();
+    };
   }, []);
 
   return (
     <>
-      <canvas width={`${window.innerWidth}px`} height={`${window.innerHeight}px`} id="Dcanvas"></canvas>
+      <div className="canvas__inner">
+        <canvas width={`${window.innerWidth}px`} height={`${window.innerHeight}px`} id="Dcanvas"></canvas>
+      </div>
     </>
   );
 }

@@ -75,8 +75,7 @@ function Intro() {
   return (
     <>
       <section id="intro" onMouseMove={imgMove} ref={sectionRef}>
-        {/* {isDown ? <BallDown /> : null} */}
-        <BallDown />
+        {isDown ? <BallDown /> : null}
         <Ball />
         <div className="intro__inner">
           <h2 ref={titleRef} id="main__title">

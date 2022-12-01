@@ -1,4 +1,4 @@
-import { AboutIntro, Focus, Skill } from './';
+import { AboutIntro, Focus, Skill } from '../components';
 import { useRef, useState, useEffect } from 'react';
 
 function About() {
@@ -13,7 +13,7 @@ function About() {
   }, []);
 
   const handleScroll = () => {
-    if (window.scrollY >= aboutRef.current.offsetTop - window.innerHeight / 3) {
+    if (window.scrollY >= 923 - window.innerHeight / 3) {
       setScroll(true);
     } else {
       setScroll(false);
