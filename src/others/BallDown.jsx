@@ -148,11 +148,15 @@ function BallDown() {
       ballB.x += (1 / ballB.r) * correction[0];
       ballB.y += (1 / ballB.r) * correction[1];
     }
+
+    // return () => {
+    //   canvas.remove();
+    // };
   }, []);
 
   return (
     <>
-      <canvas width="1920px" height="1080px" id="Dcanvas"></canvas>
+      <canvas width={`${window.innerWidth}px`} height={`${window.innerHeight}px`} id="Dcanvas"></canvas>
     </>
   );
 }

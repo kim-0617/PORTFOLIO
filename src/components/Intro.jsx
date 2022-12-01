@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { Ball, BallDown } from './';
+import { Ball, BallDown } from '../others';
 
 function Intro() {
   const [isDown, setIsDown] = useState(true);
@@ -40,11 +40,11 @@ function Intro() {
     // .to(titleRef.current, { duration: 1.5, text: 'PORT <br> FOLIO', ease: 'steps(12)' })
 
     gsap.set(canvas, { opacity: 0 });
-    gsap.set(firstRef.current, { opacity: 0, y: -50 });
-    gsap.set(lastRef.current, { opacity: 0, y: 50 });
-    gsap.set(firstTarget.current, { top: '45%', opacity: 0 }); // 주머니
-    gsap.set(secondTarget.current, { top: '35%', opacity: 0 }); // 물감통
-    gsap.set(thirdTarget.current, { right: -300, opacity: 0, rotate: 140 }); // 핸드폰
+    gsap.set(firstRef.current, { opacity: 0, y: window.innerWidth > 900 ? -50 : -15 });
+    gsap.set(lastRef.current, { opacity: 0, y: window.innerWidth > 900 ? 50 : 15 });
+    gsap.set(firstTarget.current, { top: window.innerWidth > 900 ? '48%' : '49%', opacity: 0 }); // 주머니
+    gsap.set(secondTarget.current, { top: window.innerWidth > 900 ? '35%' : '45%', opacity: 0 }); // 물감통
+    gsap.set(thirdTarget.current, { top: window.innerWidth > 900 ? '50vw' : '200vw', opacity: 0, rotate: 0 }); // 핸드폰
 
     setTimeout(() => {
       setIsDown(false);
@@ -64,10 +64,10 @@ function Intro() {
           ease: 'slow(0.7, 0.7, false)',
         })
         .to(thirdTarget.current, 1.2, {
-          right: 0,
+          top: 'auto',
           rotate: 0,
           opacity: 1,
-          ease: 'power1.in',
+          ease: 'power3.in',
         });
     }, 1900);
   }, []);
@@ -75,7 +75,8 @@ function Intro() {
   return (
     <>
       <section id="intro" onMouseMove={imgMove} ref={sectionRef}>
-        {isDown ? <BallDown /> : null}
+        {/* {isDown ? <BallDown /> : null} */}
+        <BallDown />
         <Ball />
         <div className="intro__inner">
           <h2 ref={titleRef} id="main__title">

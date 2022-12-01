@@ -21,6 +21,7 @@
       user-select: none;
 
       > span {
+        opacity: 0;
         display: block;
       }
     }
@@ -29,7 +30,7 @@
       // transform: translate(25vw, 10vw) !important;
       position: absolute;
       right: -30vw !important;
-      bottom: 12vw;
+      bottom: 12vw !important;
       width: 35vw;
       height: 20vw;
       background-size: contain;
@@ -113,7 +114,7 @@
       .myImg {
         width: 50vw;
         height: 30vh;
-        bottom: 18vw;
+        bottom: 18vw !important;
         right: -43vw !important;
         background-position: right bottom -10vh;
       }
@@ -128,7 +129,7 @@
       .myImg {
         width: 55vw;
         height: 20vh;
-        bottom: 22vw;
+        bottom: 22vw !important;
         right: -43vw !important;
       }
     }
@@ -142,7 +143,7 @@
       .myImg {
         width: 65vw;
         height: 20vh;
-        bottom: 16vw;
+        bottom: 16vw !important;
         right: -43vw !important;
       }
     }

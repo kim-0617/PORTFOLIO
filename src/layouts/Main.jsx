@@ -1,12 +1,16 @@
-import { Intro, About, Focus, Skill } from '../components';
-import React, { useEffect } from 'react';
+import { Intro, About } from '../components';
+import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Loader } from '../others';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
+    if (isLoading) return;
     ScrollTrigger.create({
       trigger: '#intro',
       start: 'top top',
@@ -28,10 +32,14 @@ function Main() {
 
   return (
     <main id="main">
-      <div>
-        <Intro />
-        <About />
-      </div>
+      {isLoading ? (
+        <Loader isLoading={isLoading} setIsLoading={setIsLoading} />
+      ) : (
+        <>
+          <Intro />
+          <About />
+        </>
+      )}
     </main>
   );
 }

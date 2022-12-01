@@ -3,6 +3,11 @@ canvas {
   z-index: 1;
 }
 
+#Dcanvas {
+  height: 120vh;
+  overflow: hidden;
+}
+
 /* 간격 셋팅 */
 .mb0 {
   margin-bottom: 0 !important;

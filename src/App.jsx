@@ -1,9 +1,6 @@
 import { Header, Main, Footer } from './layouts';
-import { useEffect } from 'react';
 
 function App() {
-
-
   return (
     <>
       <Header />
