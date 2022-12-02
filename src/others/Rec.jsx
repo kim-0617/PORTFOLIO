@@ -80,15 +80,15 @@ function Rec() {
     var canvas = document.getElementById('Rcanvas'),
       context = canvas.getContext('2d'),
       recs = [],
-      numrecs = window.innerWidth > 900 ? 35 : 15,
-      bounce = -0.7,
+      numrecs = window.innerWidth > 900 ? 40 : 20,
+      bounce = -0.8,
       gravity = 0;
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
     for (var radius, rec, i = 0; i < numrecs; i++) {
-      radius = Math.random() * 25 + 35;
+      radius = Math.random() * 25 + 25;
       rec = new Rec(radius, 'transparent');
       rec.mass = radius;
       rec.x = Math.random() * canvas.width;
