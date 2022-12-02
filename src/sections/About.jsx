@@ -15,8 +15,6 @@ function About() {
   const handleScroll = () => {
     if (window.scrollY >= 923 - window.innerHeight / 3) {
       setScroll(true);
-    } else {
-      setScroll(false);
     }
   };
 

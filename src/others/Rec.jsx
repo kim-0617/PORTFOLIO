@@ -19,7 +19,8 @@ function Rec() {
       this.scaleX = 1;
       this.scaleY = 1;
       this.color = color;
-      this.lineWidth = 2;
+      this.lineWidth = 5;
+      this.angle = 0;
     }
 
     draw(context) {
@@ -28,14 +29,23 @@ function Rec() {
       context.rotate(this.rotation);
       context.scale(this.scaleX, this.scaleY);
 
-      context.lineWidth = this.lineWidth;
+      this.incrementAngle();
+      context.save();
+      context.translate(200, 200);
+      context.rotate(this.convertToRadians(this.angle));
+      // set the fill style
+      // context.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      // context.fillRect(-25, -25, 50, 50);
       context.fillStyle = '#FF936B';
       context.strokeStyle = '#FF936B';
+      context.lineWidth = this.lineWidth;
+      context.strokeRect(0, 0, this.radius, this.radius);
+      context.restore();
+
       context.stroke();
       context.beginPath();
       //x, y, radius, start_angle, end_angle, anti-clockwise
       // context.arc(0, 0, this.radius, 0, Math.PI * 2, true);
-      context.strokeRect(0, 0, this.radius, this.radius);
       // context.fillRect(0, 0, this.radius, this.radius);
       context.closePath();
       context.fill();
@@ -43,6 +53,17 @@ function Rec() {
         context.stroke();
       }
       context.restore();
+    }
+
+    convertToRadians(degree) {
+      return degree * (Math.PI / 180);
+    }
+
+    incrementAngle() {
+      this.angle++;
+      if (this.angle > 360) {
+        this.angle = 0;
+      }
     }
 
     getBounds() {
@@ -67,7 +88,7 @@ function Rec() {
     canvas.height = innerHeight;
 
     for (var radius, rec, i = 0; i < numrecs; i++) {
-      radius = Math.random() * 25 + 25;
+      radius = Math.random() * 25 + 35;
       rec = new Rec(radius, 'transparent');
       rec.mass = radius;
       rec.x = Math.random() * canvas.width;
@@ -153,8 +174,8 @@ function Rec() {
       checkWalls(rec);
     }
 
-    function draw(rec) {
-      rec.draw(context);
+    function draw(rec, a) {
+      rec.draw(context, a);
     }
 
     (function drawFrame() {

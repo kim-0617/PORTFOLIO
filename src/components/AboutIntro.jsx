@@ -18,7 +18,7 @@ function AboutIntro({ scroll }) {
     gsap.set(titleRef.current, { opacity: 0, y: 50 });
     gsap.set(firstTarget.current, { top: '45%', opacity: 0 }); // 계산기
     gsap.set(secondTarget.current, { top: '35%', opacity: 0 }); // 달력
-    gsap.set(thirdTarget.current, { right: -100, opacity: 0 }); // 사진
+    gsap.set(thirdTarget.current, { right: -50, opacity: 0 }); // 사진
 
     if (!scroll) return;
 
