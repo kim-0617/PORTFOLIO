@@ -196,7 +196,7 @@ function Rec() {
 
   return (
     <>
-      <canvas width="1920px" height="1080px" id="Rcanvas"></canvas>
+      <canvas width="3000px" height="1080px" id="Rcanvas"></canvas>
     </>
   );
 }
