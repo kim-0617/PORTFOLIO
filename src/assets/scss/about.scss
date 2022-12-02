@@ -57,8 +57,7 @@
 
   #focus {
     width: 100%;
-    height: 100vh;
-    padding-bottom: 60vw;
+    height: 135vh;
     background: var(--background1);
     color: var(--font-color1);
     h2 {
@@ -66,8 +65,9 @@
       text-align: center;
       font-size: 8.5vw;
       line-height: 1;
-      padding-top: 5vw;
+      padding-top: 8vw;
       margin-bottom: 7vw;
+      text-transform: uppercase;
     }
 
     .focus__inner {
@@ -78,7 +78,7 @@
       justify-content: center;
       > img {
         display: block;
-        width: 32vw;
+        width: 25vw;
         margin-right: 5%;
       }
       .focus__conts {
@@ -89,12 +89,13 @@
           font-family: var(--font1);
           margin-bottom: 1.9vw;
           h3 {
-            font-size: 1.355vw;
+            font-size: 1.3vw;
             font-weight: 800;
             line-height: 1.4;
+            margin-bottom: 5px;
           }
           p {
-            font-size: 1.35vw;
+            font-size: 1.2vw;
             font-weight: normal;
             line-height: 1.5;
           }
@@ -105,6 +106,7 @@
 
   #skill {
     width: 100%;
+    height: 170vh;
     background: var(--background1);
     color: var(--font-color3);
 
@@ -112,7 +114,6 @@
       text-align: center;
       font-size: 8vw;
       font-family: var(--font2);
-      padding-top: 8vw;
       margin-bottom: 5vw;
     }
     .skill__inner {
@@ -160,9 +161,12 @@
   }
 }
 
-@media (max-width: 686px) {
+@media (max-width: 768px) {
   #about {
     #focus {
+      h2 {
+        padding-top: 12vw;
+      }
       .focus__inner {
         width: 70%;
         margin: 0 auto;
@@ -183,6 +187,35 @@
               margin: 0 auto;
               width: 65%;
               margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #about {
+    #skill {
+      h2 {
+      }
+      .skill__inner {
+        width: 100%;
+        .skill__title {
+          display: none;
+        }
+
+        .skill__conts {
+          width: 80%;
+          .skill__conts__detail {
+            width: 100%;
+            .skill__conts__detail__title {
+              font-size: 12px;
+            }
+
+            .skill__conts__detail__desc {
+              font-size: 8px;
             }
           }
         }

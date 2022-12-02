@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 
 function CodingIntro() {
   return (
-    <article id="codingIntro">
-      <div className="codingIntro__inner">
+    <article id="CodingIntro">
+      <div className="CodingIntro__inner">
         <div className="first">
           <div className="first__first">
             <span className="ir">중간 쉬어가는 글자</span>

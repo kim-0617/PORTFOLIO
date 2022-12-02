@@ -2,12 +2,12 @@
   overflow: hidden;
   position: relative;
 
-  #codingIntro {
+  #CodingIntro {
     width: 100%;
     height: 180vh;
     background: var(--background2);
     position: relative;
-    .codingIntro__inner {
+    .CodingIntro__inner {
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -16,18 +16,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 72vw;
-        height: 242px;
+        width: 57vw;
+        height: 25vh;
         .first__first {
           width: 27vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/Work.svg') no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .first__second {
           width: 34vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/coding.svg') no-repeat center / contain;
         }
       }
@@ -36,18 +36,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 72vw;
-        height: 242px;
+        width: 57vw;
+        height: 25vh;
         .second__first {
           width: 27vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/Work.svg') no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .second__second {
           width: 34vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/codingFill.svg') no-repeat center / contain;
         }
       }
@@ -56,11 +56,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 72vw;
-        height: 242px;
+        width: 57vw;
+        height: 25vh;
         .third__first {
           width: 27vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/WorkFill.svg') no-repeat center / contain;
           margin-right: 2vw;
           fill: #fff;
@@ -68,7 +68,7 @@
 
         .third__second {
           width: 34vw;
-          height: 242px;
+          height: 25vh;
           background: url('image/coding.svg') no-repeat center / contain;
         }
       }
@@ -76,10 +76,10 @@
 
     .bubble {
       width: 105%;
-      height: 450px;
+      height: 48vh;
       background: url('image/bubble.svg') no-repeat center / cover;
       position: absolute;
-      transform: translateY(58%) !important;
+      transform: translateY(62%) !important;
     }
   }
 
@@ -90,8 +90,133 @@
   }
 
   #CodingWorkList {
-    width: 100%;
+    width: 64vw;
+    margin: 0 auto;
     background: var(--white);
     color: var(--font-color2);
+    margin-bottom: 20vw;
+
+    h2 {
+      font-size: 7vw;
+      font-family: var(--font2);
+      text-align: center;
+      padding-top: 5vw;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    > p {
+      text-align: center;
+      font-family: var(--font1);
+      margin-bottom: 125px;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    .CodingWorkList__inner {
+      .list__conts {
+        display: flex;
+        flex-wrap: wrap;
+        .list__conts__detail {
+          width: 49%;
+          margin-right: 2%;
+          padding: 25px 0 10px 0;
+          border-top: 1px solid var(--font-color2);
+          display: flex;
+          min-height: 18vh;
+          box-sizing: border-box;
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+
+          &:nth-child(5),
+          &:nth-child(6) {
+            border-bottom: 1px solid var(--font-color2);
+          }
+          .list__conts__detail__title {
+            width: 30%;
+            margin-right: 10%;
+            font-family: var(--font1);
+            font-weight: 400;
+          }
+
+          .list__conts__detail__desc {
+            width: 60%;
+            li {
+              margin-bottom: 15px;
+              position: relative;
+              box-sizing: border-box;
+              a {
+                font-family: var(--font1);
+                font-weight: 400;
+                color: var(--font-color2);
+                display: inline-block;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: 15vw;
+                  top: -8px;
+                  background: url('image/check.svg') no-repeat center / cover;
+                  width: 34px;
+                  height: 36px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #coding {
+    #CodingWorkList {
+      h2 {
+      }
+
+      > p {
+      }
+
+      .CodingWorkList__inner {
+        .list__conts {
+          display: flex;
+          flex-wrap: wrap;
+          .list__conts__detail {
+            width: 100%;
+
+            &:nth-child(5) {
+              border-bottom: 0;
+            }
+            .list__conts__detail__title {
+            }
+
+            .list__conts__detail__desc {
+              li {
+                a {
+                  width: 60%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    left: 30vw;
+                    top: -8px;
+                    background: url('image/check.svg') no-repeat center / cover;
+                    width: 34px;
+                    height: 36px;
+                    transform: scale(0.8);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

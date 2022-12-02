@@ -1,8 +1,115 @@
 #footer {
+  background: url('image/footerBg.png') no-repeat center / cover;
+  height: 80vh;
   .footer__inner {
-    width: 100% !important;
-    height: 100vh !important;
-    // background: var(--background2);
-    background: aqua;
+    padding-top: 28vh;
+    width: 64vw;
+    height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    font-family: var(--font1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--white);
+
+    h2 {
+      width: 40%;
+      font-size: 2.5vw;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 0.3vw;
+        margin-top: 5px;
+      }
+    }
+
+    h3 {
+      font-size: 1.2vw;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      width: 100%;
+      a {
+        display: inline-block;
+        font-size: 0.8vw;
+        font-weight: 400;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .navigation {
+      width: 20%;
+    }
+
+    .footer__right {
+      width: 20%;
+
+      .contact {
+        margin-bottom: 30px;
+      }
+    }
+
+    .footer__icon {
+      position: absolute;
+      left: 1vw;
+      bottom: 19vw;
+
+      a {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: url('image/footerIcon.png') no-repeat center / cover;
+        background-position: 0 0;
+        transform: scale(0.6);
+        margin-right: 10px;
+        &:nth-child(2) {
+          background-position: -121px 0;
+        }
+        &:nth-child(3) {
+          background-position: -182px 0;
+        }
+        &:nth-child(4) {
+          background-position: -241px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 486px) {
+  #footer {
+    .footer__inner {
+      h2 {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+
+        span {
+          display: block;
+          text-align: center;
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      .footer__icon {
+        a {
+          transform: scale(0.5);
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
