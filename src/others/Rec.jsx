@@ -15,12 +15,12 @@ function Rec() {
       this.vx = 0;
       this.vy = 0;
       this.mass = 1;
-      this.rotation = 2.3;
+      // this.rotation = 2.3;
       this.scaleX = 1;
       this.scaleY = 1;
       this.color = color;
-      this.lineWidth = 5;
-      this.angle = 0;
+      this.lineWidth = 2;
+      this.angle = 20;
     }
 
     draw(context) {
@@ -31,12 +31,11 @@ function Rec() {
 
       this.incrementAngle();
       context.save();
-      context.translate(200, 200);
+      // context.translate(200, 200);
       context.rotate(this.convertToRadians(this.angle));
       // set the fill style
       // context.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
       // context.fillRect(-25, -25, 50, 50);
-      context.fillStyle = '#FF936B';
       context.strokeStyle = '#FF936B';
       context.lineWidth = this.lineWidth;
       context.strokeRect(0, 0, this.radius, this.radius);
@@ -80,21 +79,21 @@ function Rec() {
     var canvas = document.getElementById('Rcanvas'),
       context = canvas.getContext('2d'),
       recs = [],
-      numrecs = window.innerWidth > 900 ? 40 : 20,
-      bounce = -0.8,
+      numrecs = window.innerWidth > 900 ? 30 : 15,
+      bounce = -0.95,
       gravity = 0;
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
     for (var radius, rec, i = 0; i < numrecs; i++) {
-      radius = Math.random() * 25 + 25;
+      radius = Math.random() * 30 + 25;
       rec = new Rec(radius, 'transparent');
       rec.mass = radius;
       rec.x = Math.random() * canvas.width;
       rec.y = Math.random() * canvas.height;
-      rec.vx = Math.random() * 10 - 5;
-      rec.vy = Math.random() * 10 - 5;
+      rec.vx = Math.random() * 20 - 5;
+      rec.vy = Math.random() * 20 - 5;
       recs.push(rec);
     }
 
@@ -144,9 +143,9 @@ function Rec() {
         var vel0F = rotate(vel0.x, vel0.y, sin, cos, false),
           vel1F = rotate(vel1.x, vel1.y, sin, cos, false);
         rec0.vx = vel0F.x;
-        rec0.vy = vel0F.y;
+        rec0.vy = vel0F.y - 0.9;
         rec1.vx = vel1F.x;
-        rec1.vy = vel1F.y;
+        rec1.vy = vel1F.y - 0.9;
       }
     }
 
@@ -196,7 +195,7 @@ function Rec() {
 
   return (
     <>
-      <canvas width="3000px" height="1080px" id="Rcanvas"></canvas>
+      <canvas width="1920px" height="870px" id="Rcanvas"></canvas>
     </>
   );
 }
