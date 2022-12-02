@@ -85,8 +85,83 @@
 
   #CodingWork {
     width: 100%;
-    height: 138vh;
+    height: 170vh;
     background: var(--background1);
+
+    h2 {
+      font-size: 7vw;
+      font-family: var(--font2);
+      text-align: center;
+      padding-top: 5vw;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: var(--font-color2);
+    }
+
+    > p {
+      text-align: center;
+      font-family: var(--font1);
+      margin-bottom: 125px;
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--font-color2);
+    }
+
+    .CodingWork__inner {
+      width: 1556px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      > img {
+        display: block;
+        width: 50vw;
+        margin-right: 6.2vw;
+        margin-bottom: 40px;
+      }
+
+      .menu {
+        background-color: var(--white);
+        border-radius: 5px;
+        width: 100%;
+        height: 236px;
+
+        .menu__list {
+          display: flex;
+          li {
+            margin-right: 20px;
+            margin-top: 25px;
+            margin-left: 45px;
+            user-select: none;
+            &.active a {
+              color: var(--font-color5);
+            }
+            a {
+              font-family: var(--font3);
+              font-weight: 400;
+              font-size: 22px;
+              color: var(--font-color4);
+              font-weight: 400;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .menu__conts {
+          display: flex;
+          > div {
+            width: 7vw;
+            height: 7vw;
+            margin: 25px 1vw auto 2.2vw;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+    }
   }
 
   #CodingWorkList {
