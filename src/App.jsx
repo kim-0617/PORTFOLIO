@@ -1,6 +1,7 @@
 import { Header, Main, Footer } from './layouts';
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import './assets/js/lenis';
 import { useEffect } from 'react';
 
 function App() {
