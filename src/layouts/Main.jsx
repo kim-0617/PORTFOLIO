@@ -7,22 +7,30 @@ import { Loader } from '../others';
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (isLoading) return;
 
-    // ScrollTrigger.create({
-    //   trigger: '#intro',
-    //   start: 'top top',
-    //   pin: true,
-    //   pinSpacing: false,
-    // });
+    ScrollTrigger.create({
+      trigger: '#intro',
+      start: 'top top',
+      pin: true,
+      pinSpacing: false,
+    });
+
+    ScrollTrigger.create({
+      trigger: '#about',
+      start: 'bottom bottom',
+      pin: true,
+      pinSpacing: false,
+    });
+
 
     // ScrollTrigger.create({
     //   snap: 0.332,
     // });
-  }, []);
+  }, [isLoading]);
 
   return (
     <main id="main">

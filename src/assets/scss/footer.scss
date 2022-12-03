@@ -75,13 +75,16 @@
         transform: scale(0.6);
         margin-right: 10px;
         &:nth-child(2) {
-          background-position: -121px 0;
+          background-position: -60px 0;
         }
         &:nth-child(3) {
-          background-position: -182px 0;
+          background-position: -120px 0;
         }
         &:nth-child(4) {
-          background-position: -241px 0;
+          background-position: -180px 0;
+        }
+        &:nth-child(5) {
+          background-position: -240px 0;
         }
       }
     }

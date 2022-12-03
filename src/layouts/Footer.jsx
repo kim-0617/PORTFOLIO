@@ -18,13 +18,13 @@ function Footer() {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">About Me</a>
+              <a href="#about">About Me</a>
             </li>
             <li>
-              <a href="#">My Working</a>
+              <a href="#coding">My Working</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -34,19 +34,19 @@ function Footer() {
             <h3>Contact</h3>
             <ul>
               <li>
-                <a href="#">Kim seong hyeon</a>
+                <a href="#" title='myname'>Kim seong hyeon</a>
               </li>
               <li>
-                <a href="#">kimsh5993@gmail.com</a>
+                <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">kimsh5993@gmail.com</a>
               </li>
               <li>
-                <a href="#">010-1234-5678</a>
+                <a href="#" title='myphone'>010-1234-5678</a>
               </li>
               <li>
-                <a href="#">라인아트 컴퓨터 학원</a>
+                <a href="http://linecomputerart.com/" title="github" target="_blank" rel="noopener noreferrer">라인아트 컴퓨터 학원</a>
               </li>
               <li>
-                <a href="#">webstroyboy</a>
+                <a href="https://wtss.tistory.com/" title="webs" target="_blank" rel="noopener noreferrer">webstroyboy</a>
               </li>
             </ul>
           </div>
@@ -74,9 +74,6 @@ function Footer() {
           <a href="https://kim0617.tistory.com/" title="blog" target="_blank" rel="noopener noreferrer">
             <span className="ir">블로그 아이콘</span>
           </a>
-          <a href="https://codepen.io/your-work" title="codepen" target="_blank" rel="noopener noreferrer">
-            <span className="ir">코드펜 아이콘</span>
-          </a>
           <a
             href="https://www.figma.com/file/pm3ghQhBqbBolleXCZYmYa/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0?node-id=0%3A1&t=qAsXDMWl7ieQ9lnl-1"
             title="figma"
@@ -84,6 +81,12 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <span className="ir">피그마 아이콘</span>
+          </a>
+          <a href="https://codepen.io/your-work" title="codepen" target="_blank" rel="noopener noreferrer">
+            <span className="ir">코드펜 아이콘</span>
+          </a>
+          <a href="https://www.notion.so/PLANNING-1e1b35450c8e434b8c64ff434c1de74d" title="notion" target="_blank" rel="noopener noreferrer">
+            <span className="ir">노션 아이콘</span>
           </a>
         </div>
       </div>

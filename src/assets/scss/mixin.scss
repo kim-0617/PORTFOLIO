@@ -44,7 +44,7 @@
 @mixin clearfix {
   &::before,
   &::after {
-    content: "";
+    content: '';
     display: block;
     line-height: 0;
   }

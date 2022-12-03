@@ -46,7 +46,8 @@ function Loader({ setIsLoading }) {
     const tl = gsap.timeline({ onComplete: onCompleteTimeline, repeat: 0, repeatDelay: 0 });
 
     tl.to('.loader__item--c', { opacity: 1, duration: 0 });
-    tl.from(
+
+    tl.from( // 첫번쨰 portfolio 한글자씩 - 가운데
       chars,
       {
         duration: 1,
@@ -58,7 +59,7 @@ function Loader({ setIsLoading }) {
       },
       '-=0.5',
     );
-    tl.fromTo(
+    tl.fromTo( // 두번째 portfolio 올라오는거  - 위아래
       '.loader__item--ct',
       {
         opacity: 0,
@@ -71,7 +72,7 @@ function Loader({ setIsLoading }) {
       },
       '-=1',
     );
-    tl.to(
+    tl.to( // 올라온 후 옆으로 붙는거
       '.loader__col .loader__item',
       {
         delay: 0.5,
@@ -80,18 +81,18 @@ function Loader({ setIsLoading }) {
       },
       '-=0.3',
     );
-    tl.to('.loader__col--1', {
+    tl.to('.loader__col--1', { // done이 없으면 작은글자가 겹쳐서 나옴
       className: 'loader__col loader__col--1 done',
     });
 
-    tl.fromTo(
+    tl.fromTo( // 왼쪽 큰 글씨 마저 다 나오게 하기
       '.loader__col.loader__col--1 .bbobo',
       {
-        x: -50,
+        y: 50,
         opacity: 0,
       },
       {
-        x: 0,
+        y: 0,
         duration: 1,
         opacity: 1,
         // stagger: 0.1,
@@ -102,11 +103,11 @@ function Loader({ setIsLoading }) {
     tl.fromTo(
       '.loader__col.loader__col--2 .bbobo',
       {
-        x: -50,
+        y: 50,
         opacity: 0,
       },
       {
-        x: 0,
+        y: 0,
         duration: 1,
         opacity: 1,
         // stagger: 0.1,
@@ -116,11 +117,11 @@ function Loader({ setIsLoading }) {
     tl.fromTo(
       '.loader__col.loader__col--3 .bbobo',
       {
-        x: -50,
+        y: 50,
         opacity: 0,
       },
       {
-        x: 0,
+        y: 0,
         duration: 1,
         opacity: 1,
         // stagger: 0.1,
@@ -130,11 +131,11 @@ function Loader({ setIsLoading }) {
     tl.fromTo(
       '.loader__col.loader__col--4 .bbobo',
       {
-        x: -50,
+        y: 50,
         opacity: 0,
       },
       {
-        x: 0,
+        y: 0,
         duration: 1,
         opacity: 1,
         // stagger: 0.1,
@@ -144,22 +145,24 @@ function Loader({ setIsLoading }) {
     tl.fromTo(
       '.loader__col.loader__col--5 .bbobo',
       {
-        x: -50,
+        y: 50,
         opacity: 0,
       },
       {
-        x: 0,
+        y: 0,
         duration: 1,
         opacity: 1,
         // stagger: 0.1,
       },
       '-=0.8',
     );
+
     tl.to('.gogori', {
       opacity: 0,
       duration: 1.0,
     });
     tl.to('.loader__item--ec', {
+      left: '-15vw',
       scale: 80,
       duration: 1.0,
     });
