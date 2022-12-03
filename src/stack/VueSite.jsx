@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import { mapping } from '../components/CodingWork';
 
-function VueSite() {
+function VueSite(prop, ref) {
   useEffect(() => {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
@@ -8,8 +9,14 @@ function VueSite() {
     });
   }, []);
 
+  const onClickSite = (e) => {
+    if (e.target.className !== 'menu__conts') {
+      ref.current.swiper.slideTo(mapping[e.target.className]);
+    }
+  }
+
   return (
-    <div className="menu__conts">
+    <div className="menu__conts" onClick={onClickSite}>
       <div className="sixOne">
         <span className="ir">VUE 6-1</span>
       </div>
@@ -20,4 +27,4 @@ function VueSite() {
   );
 }
 
-export default VueSite;
+export default forwardRef(VueSite);

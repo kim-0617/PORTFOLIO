@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import { mapping } from '../components/CodingWork';
 
-function Php() {
+function Php(prop, ref) {
   useEffect(() => {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
@@ -8,8 +9,14 @@ function Php() {
     });
   }, []);
 
+  const onClickSite = (e) => {
+    if (e.target.className !== 'menu__conts') {
+      ref.current.swiper.slideTo(mapping[e.target.className]);
+    }
+  }
+
   return (
-    <div className="menu__conts">
+    <div className="menu__conts" onClick={onClickSite}>
       <div className="fiveOne">
         <span className="ir">PHP 5-1</span>
       </div>
@@ -20,4 +27,4 @@ function Php() {
   );
 }
 
-export default Php;
+export default forwardRef(Php);

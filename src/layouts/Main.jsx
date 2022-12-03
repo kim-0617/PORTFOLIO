@@ -7,7 +7,7 @@ import { Loader } from '../others';
 gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isLoading) return;

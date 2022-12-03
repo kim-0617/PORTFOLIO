@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import { mapping } from '../components/CodingWork';
 
-function Responsive() {
+function Responsive(prop, ref) {
   useEffect(() => {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
@@ -8,8 +9,14 @@ function Responsive() {
     });
   }, []);
 
+  const onClickSite = (e) => {
+    if (e.target.className !== 'menu__conts') {
+      ref.current.swiper.slideTo(mapping[e.target.className]);
+    }
+  }
+
   return (
-    <div className="menu__conts">
+    <div className="menu__conts" onClick={onClickSite}>
       <div className="twoOne">
         <span className="ir">반응형 2-1</span>
       </div>
@@ -20,4 +27,4 @@ function Responsive() {
   );
 }
 
-export default Responsive;
+export default forwardRef(Responsive);

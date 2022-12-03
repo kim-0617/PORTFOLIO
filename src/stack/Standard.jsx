@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import { mapping } from '../components/CodingWork';
 
-function standard() {
+function standard(prop, ref) {
   useEffect(() => {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
@@ -8,8 +9,14 @@ function standard() {
     });
   }, []);
 
+  const onClickSite = (e) => {
+    if (e.target.className !== 'menu__conts') {
+      ref.current.swiper.slideTo(mapping[e.target.className]);
+    }
+  }
+
   return (
-    <div className="menu__conts">
+    <div className="menu__conts" onClick={onClickSite}>
       <div className="oneOne">
         <span className="ir">알고리즘</span>
       </div>
@@ -26,4 +33,4 @@ function standard() {
   );
 }
 
-export default standard;
+export default forwardRef(standard);
