@@ -1,6 +1,7 @@
 import { Header, Main, Footer } from './layouts';
 import gsap from "gsap"
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
