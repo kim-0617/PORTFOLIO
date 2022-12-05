@@ -2,7 +2,7 @@ import { Intro, About, Coding } from '../sections';
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Loader } from '../others';
+import { Loader, VLoader } from '../others';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +34,7 @@ function Main() {
   return (
     <main id="main">
       {isLoading ? (
-        <Loader isLoading={isLoading} setIsLoading={setIsLoading} />
+        <VLoader isLoading={isLoading} setIsLoading={setIsLoading} />
       ) : (
         <>
           <Intro />

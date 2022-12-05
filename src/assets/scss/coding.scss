@@ -21,15 +21,15 @@
         .first__first {
           width: 27vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/Work.png?raw=true') no-repeat
-            center / contain;
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/Work.svg')
+            no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .first__second {
           width: 34vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/coding.png?raw=true')
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/coding.svg')
             no-repeat center / contain;
         }
       }
@@ -43,15 +43,15 @@
         .second__first {
           width: 27vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/Work.png?raw=true') no-repeat
-            center / contain;
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/Work.svg')
+            no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .second__second {
           width: 34vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/codingFill.png?raw=true')
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/codingFill.svg')
             no-repeat center / contain;
         }
       }
@@ -65,7 +65,7 @@
         .third__first {
           width: 27vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/WorkFill.png?raw=true')
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/WorkFill.svg')
             no-repeat center / contain;
           margin-right: 2vw;
           fill: #fff;
@@ -74,7 +74,7 @@
         .third__second {
           width: 34vw;
           height: 25vh;
-          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/coding.png?raw=true')
+          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/coding.svg')
             no-repeat center / contain;
         }
       }
@@ -83,8 +83,8 @@
     .bubble {
       width: 105%;
       height: 48vh;
-      background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/bubble.png?raw=true') no-repeat
-        center / cover;
+      background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/bubble.svg')
+        no-repeat center / cover;
       position: absolute;
       transform: translateY(62%) !important;
     }
@@ -104,7 +104,7 @@
       position: absolute;
       bottom: -77px;
       left: 0;
-      background-image: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/workwave.png?raw=true');
+      background-image: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/workwave.svg');
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -256,7 +256,7 @@
                   position: absolute;
                   left: 15vw;
                   top: -8px;
-                  background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/check.png?raw=true')
+                  background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/check.svg')
                     no-repeat center / cover;
                   width: 34px;
                   height: 36px;
@@ -266,6 +266,14 @@
           }
         }
       }
+    }
+  }
+}
+
+.checknone {
+  a {
+    &::before {
+      background: none !important;
     }
   }
 }
@@ -304,7 +312,7 @@
                     position: absolute;
                     left: 30vw;
                     top: -8px;
-                    background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/check.png?raw=true')
+                    background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/check.svg')
                       no-repeat center / cover;
                     width: 34px;
                     height: 36px;

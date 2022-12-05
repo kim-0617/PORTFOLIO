@@ -19,7 +19,7 @@ function Rec() {
       this.scaleX = 1;
       this.scaleY = 1;
       this.color = color;
-      this.lineWidth = 2;
+      this.lineWidth = 1;
       this.angle = 20;
     }
 
@@ -80,7 +80,7 @@ function Rec() {
       context = canvas.getContext('2d'),
       recs = [],
       numrecs = window.innerWidth > 900 ? 30 : 15,
-      bounce = -0.95,
+      bounce = -0.6,
       gravity = 0;
 
     canvas.width = innerWidth;
