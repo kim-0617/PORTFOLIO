@@ -232,10 +232,6 @@ function VLoader({ setIsLoading }) {
       duration: 1.0,
     });
     tl.to('.loader__item--ec', {
-      fontSize: '3vw',
-      duration: 1,
-    });
-    tl.to('.loader__item--ec', {
       left: '-15vw',
       scale: 80,
       duration: 1.0,
