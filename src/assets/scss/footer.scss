@@ -1,5 +1,6 @@
 #footer {
-  background: url('image/footerBg.png') no-repeat center / cover;
+  background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/footerBg.png?raw=true') no-repeat
+    center / cover;
   height: 80vh;
   .footer__inner {
     padding-top: 28vh;
@@ -70,7 +71,8 @@
         width: 40px;
         height: 40px;
         display: inline-block;
-        background: url('image/footerIcon.png') no-repeat center / cover;
+        background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/footerIcon.png?raw=true')
+          no-repeat center / cover;
         background-position: 0 0;
         transform: scale(0.6);
         margin-right: 10px;
