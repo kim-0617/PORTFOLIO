@@ -40,6 +40,17 @@ canvas {
   outline: none;
 }
 
+.hero.is-relative {
+  position: relative;
+}
+
+#demo-canvas {
+  position: absolute;
+  bottom: 40vh;
+  width: 200vw;
+  height: 250vh;
+}
+
 /* 간격 셋팅 */
 .mb0 {
   margin-bottom: 0 !important;

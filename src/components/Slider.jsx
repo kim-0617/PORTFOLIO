@@ -4,10 +4,10 @@ function Slider({ src, index }) {
   return (
     <>
       <div className="slider__detail">
-        <button class="custom-btn btn-8">
+        <button className="custom-btn btn-8">
           <span>소스보기</span>
         </button>
-        <button class="custom-btn btn-8">
+        <button className="custom-btn btn-8">
           <span>데모보기</span>
         </button>
       </div>
