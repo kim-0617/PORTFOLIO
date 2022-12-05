@@ -68,7 +68,6 @@
           background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/WorkFill.svg')
             no-repeat center / contain;
           margin-right: 2vw;
-          fill: #fff;
         }
 
         .third__second {
@@ -130,8 +129,9 @@
     }
 
     .CodingWork__inner {
-      width: 1556px;
-      width: 81vw;
+      // width: 1556px;
+      // width: 81vw;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -147,7 +147,7 @@
       .menu {
         background-color: var(--white);
         border-radius: 10px;
-        width: 100%;
+        width: 81vw;
         height: 236px;
 
         .menu__list {
@@ -172,6 +172,7 @@
         }
 
         .menu__conts {
+          width: 100%;
           display: flex;
           > div {
             width: 6vw;
@@ -180,6 +181,10 @@
             cursor: pointer;
             background-repeat: no-repeat;
             background-position: center;
+            border: 7px solid #15bab8;
+            padding: 15px;
+            background-size: contain;
+            border-radius: 5px;
           }
         }
       }

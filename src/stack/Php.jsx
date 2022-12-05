@@ -6,6 +6,8 @@ function Php(prop, ref) {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/5-${index + 1}.png')`;
+      t.style.borderColor = '#8DAA98';
+      t.style.backgroundColor = '#B9CFC1';
     });
   }, []);
 
@@ -13,7 +15,7 @@ function Php(prop, ref) {
     if (e.target.className !== 'menu__conts') {
       ref.current.swiper.slideTo(mapping[e.target.className]);
     }
-  }
+  };
 
   return (
     <div className="menu__conts" onClick={onClickSite}>

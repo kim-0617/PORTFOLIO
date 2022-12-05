@@ -6,6 +6,8 @@ function ReactSite(prop, ref) {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/7-${index + 1}.png')`;
+      t.style.borderColor = '#879AAA';
+      t.style.backgroundColor = '#B1C6DF';
     });
   }, []);
 
@@ -13,7 +15,7 @@ function ReactSite(prop, ref) {
     if (e.target.className !== 'menu__conts') {
       ref.current.swiper.slideTo(mapping[e.target.className]);
     }
-  }
+  };
 
   return (
     <div className="menu__conts" onClick={onClickSite}>

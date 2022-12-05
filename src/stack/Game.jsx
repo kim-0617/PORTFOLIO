@@ -6,6 +6,8 @@ function Game(prop, ref) {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/4-${index + 1}.png')`;
+      t.style.borderColor = '#C2A66A';
+      t.style.backgroundColor = '#EECE87';
     });
   }, []);
 
@@ -13,7 +15,7 @@ function Game(prop, ref) {
     if (e.target.className !== 'menu__conts') {
       ref.current.swiper.slideTo(mapping[e.target.className]);
     }
-  }
+  };
 
   return (
     <div className="menu__conts" onClick={onClickSite}>

@@ -6,6 +6,8 @@ function Responsive(prop, ref) {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/2-${index + 1}.png')`;
+      t.style.borderColor = '#A2A2A2';
+      t.style.backgroundColor = '#DEDEDE';
     });
   }, []);
 
@@ -13,7 +15,7 @@ function Responsive(prop, ref) {
     if (e.target.className !== 'menu__conts') {
       ref.current.swiper.slideTo(mapping[e.target.className]);
     }
-  }
+  };
 
   return (
     <div className="menu__conts" onClick={onClickSite}>

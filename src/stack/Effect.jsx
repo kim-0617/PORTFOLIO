@@ -6,6 +6,8 @@ function Effect(prop, ref) {
     const target = document.querySelectorAll('.menu__conts > div');
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/3-${index + 1}.png')`;
+      t.style.borderColor = '#B89186';
+      t.style.backgroundColor = '#F9D1C2';
     });
   }, []);
 
@@ -13,7 +15,7 @@ function Effect(prop, ref) {
     if (e.target.className !== 'menu__conts') {
       ref.current.swiper.slideTo(mapping[e.target.className]);
     }
-  }
+  };
 
   return (
     <div className="menu__conts" onClick={onClickSite}>

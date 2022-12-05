@@ -44,7 +44,7 @@ function VLoader({ setIsLoading }) {
 
     const chars = splitText('.loader__item--ec');
     const tl = gsap.timeline({
-      // onComplete: onCompleteTimeline,
+      onComplete: onCompleteTimeline,
       repeat: 0,
       repeatDelay: 0,
     });
@@ -67,29 +67,88 @@ function VLoader({ setIsLoading }) {
     tl.to('.loader__col--3', {
       className: 'loader__col loader__col--3 done',
     });
+
     tl.fromTo(
-      // 두번째 portfolio 올라오는거  - 위아래
-      '.loader__first',
+      '.loader__first3',
       {
+        x: 120,
         opacity: 0,
       },
       {
+        x: 0,
         opacity: 1,
-        delay: 0.5,
+        delay: 0.3,
       },
       '-=1',
     );
     tl.fromTo(
-      '.loader__second',
+      '.loader__first5',
       {
+        x: -120,
         opacity: 0,
       },
       {
+        x: 0,
+        opacity: 1,
+        delay: 0.3,
+      },
+      '-=1',
+    );
+
+    tl.fromTo(
+      '.loader__second2',
+      {
+        x: 120,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        delay: 0.3,
+      },
+      '-=0.5',
+    );
+    tl.fromTo(
+      '.loader__second6',
+      {
+        x: -120,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        delay: 0.3,
+      },
+      '-=0.8',
+    );
+
+    tl.fromTo(
+      '.loader__third1',
+      {
+        x: 120,
+        opacity: 0,
+      },
+      {
+        x: 0,
         opacity: 1,
         delay: 1,
       },
-      '-=1',
+      '-=0.9',
     );
+    tl.fromTo(
+      '.loader__third7',
+      {
+        x: -120,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        delay: 0.2,
+      },
+      '-=0.75',
+    );
+
     tl.fromTo(
       '.top__first',
       {
@@ -101,7 +160,7 @@ function VLoader({ setIsLoading }) {
         opacity: 1,
         delay: 0.5,
       },
-      '-=1',
+      '-=0.5',
     );
     tl.fromTo(
       '.bot__first',
@@ -142,9 +201,39 @@ function VLoader({ setIsLoading }) {
       },
       '-=1.5',
     );
+    tl.fromTo(
+      '.top__third',
+      {
+        y: 40,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 1,
+      },
+      '-=1',
+    );
+    tl.fromTo(
+      '.bot__third',
+      {
+        y: -40,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 1,
+      },
+      '-=1.5',
+    );
     tl.to('.gogori', {
       opacity: 0,
       duration: 1.0,
+    });
+    tl.to('.loader__item--ec', {
+      fontSize: '3vw',
+      duration: 1,
     });
     tl.to('.loader__item--ec', {
       left: '-15vw',
@@ -165,30 +254,16 @@ function VLoader({ setIsLoading }) {
     <div className="loader">
       <div className="loader__cols">
         <div className="loader__col loader__col--1">
-          <div data-a-p className="loader__item gogori loader__item--ct top__second">
+          <div data-a-p className="loader__item bbobo gogori top__third">
             PORTFOLIO
           </div>
-          <div data-a-p className="loader__item bbobo gogori top__first">
-            PORTFOLIO
-          </div>
-          <div data-a-h className="loader__item gogori loader__second">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item bbobo gogori bot__first">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item gogori loader__item--ct bot__second">
-            PORTFOLIO
-          </div>
-        </div>
-        <div className="loader__col loader__col--2">
           <div data-a-p className="loader__item bbobo gogori top__second">
             PORTFOLIO
           </div>
-          <div data-a-p className="loader__item bbobo gogori top__first">
+          <div data-a-h className="loader__item bbobo gogori top__first">
             PORTFOLIO
           </div>
-          <div data-a-p className="loader__item bbobo gogori loader__first">
+          <div data-a-p className="loader__item bbobo gogori loader__third1">
             PORTFOLIO
           </div>
           <div data-a-p className="loader__item bbobo gogori bot__first">
@@ -197,8 +272,60 @@ function VLoader({ setIsLoading }) {
           <div data-a-p className="loader__item bbobo gogori bot__second">
             PORTFOLIO
           </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
+            PORTFOLIO
+          </div>
+        </div>
+        <div className="loader__col loader__col--2">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori loader__second2">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
+            PORTFOLIO
+          </div>
         </div>
         <div className="loader__col loader__col--3">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori loader__first3">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
+            PORTFOLIO
+          </div>
+        </div>
+        <div className="loader__col loader__col--4">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
           <div data-a-p className="loader__item bbobo gogori top__second">
             PORTFOLIO
           </div>
@@ -214,38 +341,76 @@ function VLoader({ setIsLoading }) {
           <div data-a-p className="loader__item bbobo gogori bot__second">
             PORTFOLIO
           </div>
-        </div>
-        <div className="loader__col loader__col--4">
-          <div data-a-p className="loader__item bbobo gogori top__second">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item bbobo gogori top__first">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item bbobo gogori loader__first">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item bbobo gogori bot__first">
-            PORTFOLIO
-          </div>
-          <div data-a-p className="loader__item bbobo gogori bot__second">
+          <div data-a-p className="loader__item bbobo gogori bot__third">
             PORTFOLIO
           </div>
         </div>
         <div className="loader__col loader__col--5">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
           <div data-a-p className="loader__item bbobo gogori top__second">
             PORTFOLIO
           </div>
           <div data-a-p className="loader__item bbobo gogori top__first">
             PORTFOLIO
           </div>
-          <div data-a-p className="loader__item bbobo gogori loader__second">
+          <div data-a-p className="loader__item bbobo gogori loader__first5">
             PORTFOLIO
           </div>
           <div data-a-p className="loader__item bbobo gogori bot__first">
             PORTFOLIO
           </div>
           <div data-a-p className="loader__item bbobo gogori bot__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
+            PORTFOLIO
+          </div>
+        </div>
+        <div className="loader__col loader__col--6">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori loader__second6">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
+            PORTFOLIO
+          </div>
+        </div>
+        <div className="loader__col loader__col--7">
+          <div data-a-p className="loader__item bbobo gogori top__third">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori top__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori loader__third7">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__first">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__second">
+            PORTFOLIO
+          </div>
+          <div data-a-p className="loader__item bbobo gogori bot__third">
             PORTFOLIO
           </div>
         </div>
