@@ -1,6 +1,25 @@
 import React from 'react';
 
 function Footer() {
+  // 스킵 메뉴
+  document.querySelectorAll('#skip a').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
+
+  const onClickFooter = (e) => {
+    if (e.target.tagName === 'A') {
+      e.preventDefault();
+      document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <footer id="footer">
       <div className="footer__inner">
@@ -13,18 +32,20 @@ function Footer() {
 
         <div className="navigation">
           <h3>Navigation</h3>
-          <ul>
+          <ul onClick={onClickFooter}>
             <li>
-              <a href="#">Home</a>
+              <a href="header">Home</a>
             </li>
             <li>
-              <a href="#about">About Me</a>
+              <a href="#intro">About Me</a>
             </li>
             <li>
               <a href="#coding">My Working</a>
             </li>
             <li>
-              <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">Contact Us</a>
+              <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>
@@ -34,19 +55,29 @@ function Footer() {
             <h3>Contact</h3>
             <ul>
               <li>
-                <a href="#" title='myname'>Kim seong hyeon</a>
+                <a href="#" title="myname">
+                  Kim seong hyeon
+                </a>
               </li>
               <li>
-                <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">kimsh5993@gmail.com</a>
+                <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
+                  kimsh5993@gmail.com
+                </a>
               </li>
               <li>
-                <a href="#" title='myphone'>010-1234-5678</a>
+                <a href="#" title="myphone">
+                  010-1234-5678
+                </a>
               </li>
               <li>
-                <a href="http://linecomputerart.com/" title="github" target="_blank" rel="noopener noreferrer">라인아트 컴퓨터 학원</a>
+                <a href="http://linecomputerart.com/" title="github" target="_blank" rel="noopener noreferrer">
+                  라인아트 컴퓨터 학원
+                </a>
               </li>
               <li>
-                <a href="https://wtss.tistory.com/" title="webs" target="_blank" rel="noopener noreferrer">webstroyboy</a>
+                <a href="https://wtss.tistory.com/" title="webs" target="_blank" rel="noopener noreferrer">
+                  webstroyboy
+                </a>
               </li>
             </ul>
           </div>
@@ -85,7 +116,12 @@ function Footer() {
           <a href="https://codepen.io/your-work" title="codepen" target="_blank" rel="noopener noreferrer">
             <span className="ir">코드펜 아이콘</span>
           </a>
-          <a href="https://www.notion.so/PLANNING-1e1b35450c8e434b8c64ff434c1de74d" title="notion" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.notion.so/PLANNING-1e1b35450c8e434b8c64ff434c1de74d"
+            title="notion"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="ir">노션 아이콘</span>
           </a>
         </div>
