@@ -21,14 +21,14 @@
         .first__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/Work.svg') no-repeat center / contain;
+          background: url('image/Work.png') no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .first__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/coding.svg') no-repeat center / contain;
+          background: url('image/coding.png') no-repeat center / contain;
         }
       }
 
@@ -41,14 +41,14 @@
         .second__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/Work.svg') no-repeat center / contain;
+          background: url('image/Work.png') no-repeat center / contain;
           margin-right: 2vw;
         }
 
         .second__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/codingFill.svg') no-repeat center / contain;
+          background: url('image/codingFill.png') no-repeat center / contain;
         }
       }
 
@@ -61,7 +61,7 @@
         .third__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/WorkFill.svg') no-repeat center / contain;
+          background: url('image/WorkFill.png') no-repeat center / contain;
           margin-right: 2vw;
           fill: #fff;
         }
@@ -69,7 +69,7 @@
         .third__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/coding.svg') no-repeat center / contain;
+          background: url('image/coding.png') no-repeat center / contain;
         }
       }
     }
@@ -77,7 +77,7 @@
     .bubble {
       width: 105%;
       height: 48vh;
-      background: url('image/bubble.svg') no-repeat center / cover;
+      background: url('image/bubble.png') no-repeat center / cover;
       position: absolute;
       transform: translateY(62%) !important;
     }
@@ -97,7 +97,7 @@
       position: absolute;
       bottom: -77px;
       left: 0;
-      background-image: url('image/workwave.svg');
+      background-image: url('image/workwave.png');
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -249,7 +249,7 @@
                   position: absolute;
                   left: 15vw;
                   top: -8px;
-                  background: url('image/check.svg') no-repeat center / cover;
+                  background: url('image/check.png') no-repeat center / cover;
                   width: 34px;
                   height: 36px;
                 }
@@ -296,7 +296,7 @@
                     position: absolute;
                     left: 30vw;
                     top: -8px;
-                    background: url('image/check.svg') no-repeat center / cover;
+                    background: url('image/check.png') no-repeat center / cover;
                     width: 34px;
                     height: 36px;
                     transform: scale(0.8);
