@@ -21,14 +21,16 @@
         .first__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/Work.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/Work.png?raw=true') no-repeat
+            center / contain;
           margin-right: 2vw;
         }
 
         .first__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/coding.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/coding.png?raw=true')
+            no-repeat center / contain;
         }
       }
 
@@ -41,14 +43,16 @@
         .second__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/Work.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/Work.png?raw=true') no-repeat
+            center / contain;
           margin-right: 2vw;
         }
 
         .second__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/codingFill.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/codingFill.png?raw=true')
+            no-repeat center / contain;
         }
       }
 
@@ -61,7 +65,8 @@
         .third__first {
           width: 27vw;
           height: 25vh;
-          background: url('image/WorkFill.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/WorkFill.png?raw=true')
+            no-repeat center / contain;
           margin-right: 2vw;
           fill: #fff;
         }
@@ -69,7 +74,8 @@
         .third__second {
           width: 34vw;
           height: 25vh;
-          background: url('image/coding.png') no-repeat center / contain;
+          background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/coding.png?raw=true')
+            no-repeat center / contain;
         }
       }
     }
@@ -77,7 +83,8 @@
     .bubble {
       width: 105%;
       height: 48vh;
-      background: url('image/bubble.png') no-repeat center / cover;
+      background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/bubble.png?raw=true') no-repeat
+        center / cover;
       position: absolute;
       transform: translateY(62%) !important;
     }
@@ -97,7 +104,7 @@
       position: absolute;
       bottom: -77px;
       left: 0;
-      background-image: url('image/workwave.png');
+      background-image: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/workwave.png?raw=true');
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -167,9 +174,9 @@
         .menu__conts {
           display: flex;
           > div {
-            width: 7vw;
+            width: 6vw;
             height: 7vw;
-            margin: 25px 1vw auto 2.2vw;
+            margin: 25px 0 auto 2.2vw;
             cursor: pointer;
             background-repeat: no-repeat;
             background-position: center;
@@ -249,7 +256,8 @@
                   position: absolute;
                   left: 15vw;
                   top: -8px;
-                  background: url('image/check.png') no-repeat center / cover;
+                  background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/check.png?raw=true')
+                    no-repeat center / cover;
                   width: 34px;
                   height: 36px;
                 }
@@ -296,7 +304,8 @@
                     position: absolute;
                     left: 30vw;
                     top: -8px;
-                    background: url('image/check.png') no-repeat center / cover;
+                    background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/check.png?raw=true')
+                      no-repeat center / cover;
                     width: 34px;
                     height: 36px;
                     transform: scale(0.8);
