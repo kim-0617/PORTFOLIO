@@ -83,7 +83,7 @@
       text-align: center;
       position: relative;
       overflow: visible;
-      left: -400px;
+      left: -200px;
       top: -330px;
       height: 130vh;
       width: 100vw;
@@ -303,7 +303,9 @@
 @media (max-width: 900px) {
   #coding {
     #CodingWorkList {
+      height: auto;
       h2 {
+        margin-top: 15vw;
       }
 
       > p {
@@ -316,10 +318,13 @@
           .list__conts__detail {
             width: 100%;
 
-            &:nth-child(5) {
+            &:nth-child(7) {
               border-bottom: 0;
             }
             .list__conts__detail__title {
+              font-size: 16px;
+              word-break: keep-all;
+              width: 35%;
             }
 
             .list__conts__detail__desc {
