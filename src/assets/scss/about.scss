@@ -75,6 +75,7 @@
     height: 135vh;
     background: var(--background1);
     color: var(--font-color1);
+    overflow: hidden;
     h2 {
       font-family: var(--font2);
       text-align: center;
@@ -83,6 +84,15 @@
       padding-top: 8vw;
       margin-bottom: 7vw;
       text-transform: uppercase;
+      position: relative;
+
+      .mask {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        opacity: 0.8;
+        background: #f1f2dd;
+      }
     }
 
     .focus__inner {

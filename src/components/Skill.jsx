@@ -5,9 +5,45 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function Skill() {
+  useEffect(() => {
+    let tl = gsap.timeline({
+      defaults: {
+        ease: 'power1.in',
+        duration: 1,
+      },
+    });
+
+    // gsap.set('#skill h2', {
+    //   opacity: 0,
+    //   y: 300,
+    //   ease: 'power4.out',
+    //   delay: 1,
+    //   skewY: 7,
+    // });
+
+    tl.from('#skill h2', 1.8, {
+      y: 100,
+      opacity: 0,
+      ease: 'power4.out',
+      delay: 1,
+      skewY: 4,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: '#skill',
+      end: '-=100',
+      scrub: 1,
+      // pin: true,
+    });
+  }, []);
+
   return (
     <article id="skill">
       <h2>BETTER DONE RIGHT</h2>
+
       <div className="skill__inner">
         <div className="skill__title">
           고등학교 때, 코딩의 신세계를 맛본 저는 컴퓨터 공학과에 진학하게 됩니다. 처음에 여러 기초 이론들을 배우고

@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Focus() {
+  useEffect(() => {
+    let tl = gsap.timeline({
+      defaults: {
+        ease: 'power1.in',
+        duration: 1,
+      },
+    });
+    tl.fromTo('.mask', { xPercent: 0 }, { xPercent: 400, stagger: 0.1 });
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: '#focus h2',
+      end: '+=80%',
+      scrub: 1,
+      // pin: true,
+    });
+  }, []);
+
   return (
     <article id="focus">
       <h2>
-        Seong Hyeon Kim <br /> Focus me
+        <span>
+          Seong Hyeon Kim <br /> Focus me
+        </span>
+        <div className="mask"></div>
       </h2>
       <div className="focus__inner">
         <img src="image/focus.png" alt="포커스페이지 사진입니다." />
