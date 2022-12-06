@@ -81,12 +81,12 @@
 
     .particletext {
       text-align: center;
-      font-size: 120px;
       position: relative;
       overflow: visible;
-      left: 0px;
-      top: 0%;
-      height: 70vh;
+      left: -400px;
+      top: -330px;
+      height: 130vh;
+      width: 100vw;
     }
     .particletext.bubbles > .particle {
       opacity: 0;
@@ -108,7 +108,7 @@
 
   #CodingWork {
     width: 100%;
-    height: 140vh;
+    height: 170vh;
     background: var(--background1);
     position: relative;
 
@@ -154,12 +154,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      > img {
-        display: block;
-        width: 33vw;
-        margin-right: 6.2vw;
-        margin-bottom: 40px;
-      }
+      // > img {
+      //   display: block;
+      //   width: 33vw;
+      //   margin-right: 6.2vw;
+      //   margin-bottom: 40px;
+      // }
 
       .menu {
         background-color: var(--white);
@@ -356,10 +356,10 @@
   }
   20% {
     opacity: 1;
-    transform: translate(0, -20%);
+    transform: translate(0, -20%) scale(3);
   }
   100% {
     opacity: 0;
-    transform: translate(0, -1000%);
+    transform: translate(0, -1000%) scale(1.5);
   }
 }

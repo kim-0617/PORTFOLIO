@@ -1,7 +1,7 @@
 import { Header, Main, Footer } from './layouts';
-import gsap from "gsap";
+import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
 import { useEffect } from 'react';
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 3.0,
+      duration: 2.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
       direction: 'vertical', // vertical, horizontal
       gestureDirection: 'vertical', // vertical, horizontal, both
@@ -49,7 +49,7 @@ function App() {
       smoothTouch: false,
       touchMultiplier: 50,
       infinite: false,
-    })
+    });
 
     //get scroll value
     // lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
@@ -57,11 +57,11 @@ function App() {
     // })
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
   }, []);
 
   return (
