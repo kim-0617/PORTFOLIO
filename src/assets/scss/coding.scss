@@ -250,12 +250,12 @@
             margin-right: 0;
           }
 
-          &:nth-child(5),
-          &:nth-child(6) {
+          &:nth-child(7),
+          &:nth-child(8) {
             border-bottom: 1px solid var(--font-color2);
           }
           .list__conts__detail__title {
-            width: 30%;
+            width: 20%;
             margin-right: 10%;
             font-family: var(--font1);
             font-weight: 400;
@@ -276,7 +276,7 @@
                 &::before {
                   content: '';
                   position: absolute;
-                  left: 15vw;
+                  left: 19vw;
                   top: -8px;
                   background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/check.svg')
                     no-repeat center / cover;
