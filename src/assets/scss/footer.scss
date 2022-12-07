@@ -1,9 +1,9 @@
 #footer {
   background: url('https://github.com/kim-0617/PORTFOLIO/blob/master/public/image/footerBg.png?raw=true') no-repeat
     center / cover;
-  height: 80vh;
   .footer__inner {
     padding-top: 28vh;
+    padding-bottom: 15vh;
     width: 64vw;
     margin: 0 auto;
     height: inherit;
@@ -65,7 +65,7 @@
     .footer__icon {
       position: absolute;
       left: 1vw;
-      bottom: 19vw;
+      bottom: 20vw;
 
       a {
         width: 40px;

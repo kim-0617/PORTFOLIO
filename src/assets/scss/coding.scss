@@ -1,80 +1,33 @@
 #coding {
   overflow: hidden;
   position: relative;
+  // height: 430vh;
+  z-index: 400;
 
   #CodingIntro {
     width: 100%;
-    height: 180vh;
     background: var(--background2);
     position: relative;
+    // padding: 30vh 0 45vh 0;
     .CodingIntro__inner {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding-top: 30vh;
-      .first {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 57vw;
-        height: 25vh;
-        .first__first {
-          width: 27vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/Work.svg')
-            no-repeat center / contain;
-          margin-right: 2vw;
-        }
+      padding: 20vw 0 30vw 0;
 
-        .first__second {
-          width: 34vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/coding.svg')
-            no-repeat center / contain;
-        }
-      }
+      > div {
+        font-size: 15vw;
+        font-family: 'Anton';
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
 
-      .second {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 57vw;
-        height: 25vh;
-        .second__first {
-          width: 27vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/Work.svg')
-            no-repeat center / contain;
-          margin-right: 2vw;
-        }
-
-        .second__second {
-          width: 34vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/codingFill.svg')
-            no-repeat center / contain;
-        }
-      }
-
-      .third {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 57vw;
-        height: 25vh;
-        .third__first {
-          width: 27vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/WorkFill.svg')
-            no-repeat center / contain;
-          margin-right: 2vw;
-        }
-
-        .third__second {
-          width: 34vw;
-          height: 25vh;
-          background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/coding.svg')
-            no-repeat center / contain;
+        span {
+          &.line {
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px #fff;
+          }
+          &.space {
+            margin-right: 15px;
+          }
         }
       }
     }
@@ -82,11 +35,6 @@
     .particletext {
       text-align: center;
       position: relative;
-      overflow: visible;
-      left: -200px;
-      top: -330px;
-      height: 130vh;
-      width: 100vw;
     }
     .particletext.bubbles > .particle {
       opacity: 0;
@@ -102,13 +50,14 @@
       background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/bubble.svg')
         no-repeat center / cover;
       position: absolute;
-      transform: translateY(62%) !important;
+      left: 0;
+      bottom: 0;
+      transform: translateY(10%) !important;
     }
   }
 
   #CodingWork {
     width: 100%;
-    height: 170vh;
     background: var(--background1);
     position: relative;
 
@@ -209,11 +158,11 @@
   }
 
   #CodingWorkList {
-    width: 64vw;
+    width: 100%;
     margin: 0 auto;
     background: var(--white);
     color: var(--font-color2);
-    margin-bottom: 20vw;
+    padding: 10vw 0;
 
     h2 {
       font-size: 7vw;
@@ -234,6 +183,8 @@
     }
 
     .CodingWorkList__inner {
+      width: 64vw;
+      margin: 0 auto;
       .list__conts {
         display: flex;
         flex-wrap: wrap;
@@ -303,7 +254,6 @@
 @media (max-width: 900px) {
   #coding {
     #CodingWorkList {
-      height: auto;
       h2 {
         margin-top: 15vw;
       }

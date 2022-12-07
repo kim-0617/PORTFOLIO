@@ -15,12 +15,12 @@ function Rec() {
       this.vx = 0;
       this.vy = 0;
       this.mass = 1;
-      // this.rotation = 2.3;
+      this.rotation = 2.3;
       this.scaleX = 1;
       this.scaleY = 1;
       this.color = color;
-      this.lineWidth = 1;
-      this.angle = 20;
+      this.lineWidth = 2;
+      this.angle = 3;
     }
 
     draw(context) {
@@ -29,10 +29,10 @@ function Rec() {
       context.rotate(this.rotation);
       context.scale(this.scaleX, this.scaleY);
 
-      this.incrementAngle();
+      // this.incrementAngle();
       context.save();
       // context.translate(200, 200);
-      context.rotate(this.convertToRadians(this.angle));
+      // context.rotate(this.convertToRadians(this.angle));
       // set the fill style
       // context.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
       // context.fillRect(-25, -25, 50, 50);
@@ -79,15 +79,15 @@ function Rec() {
     var canvas = document.getElementById('Rcanvas'),
       context = canvas.getContext('2d'),
       recs = [],
-      numrecs = window.innerWidth > 900 ? 30 : 15,
+      numrecs = window.innerWidth > 900 ? 25 : 15,
       bounce = -0.6,
-      gravity = 0;
+      gravity = 0.0001;
 
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
     for (var radius, rec, i = 0; i < numrecs; i++) {
-      radius = Math.random() * 30 + 25;
+      radius = Math.random() * 20 + 25;
       rec = new Rec(radius, 'transparent');
       rec.mass = radius;
       rec.x = Math.random() * canvas.width;
@@ -195,7 +195,7 @@ function Rec() {
 
   return (
     <>
-      <canvas width="1920px" height="870px" id="Rcanvas"></canvas>
+      <canvas width="1920px" height="1200px" id="Rcanvas"></canvas>
     </>
   );
 }

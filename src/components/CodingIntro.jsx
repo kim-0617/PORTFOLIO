@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { Bubble } from '../others';
+// import { Bubble } from '../others';
 
 function CodingIntro() {
   useEffect(() => {
     function bubbles() {
       $.each($('.particletext.bubbles'), function () {
-        var bubblecount = ($(this).width() / 50) * 3;
+        var bubblecount = ($(this).width() / 50) * 1.2;
         for (var i = 0; i <= bubblecount; i++) {
           var size = $.rnd(40, 80) / 10;
           $(this).append(
@@ -37,29 +37,17 @@ function CodingIntro() {
     <>
       <article id="CodingIntro">
         <div className="CodingIntro__inner">
-          <div className="first">
-            <div className="first__first">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
-            <div className="first__second">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
+          <div>
+            <span className="particletext bubbles space">work</span>
+            <span className="line particletext bubbles">coding</span>
           </div>
-          <div className="second">
-            <div className="second__first">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
-            <div className="second__second">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
+          <div>
+            <span className="line particletext bubbles space">work</span>
+            <span className="particletext bubbles">coding</span>
           </div>
-          <div className="third">
-            <div className="third__first">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
-            <div className="third__second">
-              <span className="ir particletext bubbles">중간 쉬어가는 글자</span>
-            </div>
+          <div>
+            <span className="particletext bubbles space">work</span>
+            <span className="line particletext bubbles">coding</span>
           </div>
         </div>
         <div className="bubble">

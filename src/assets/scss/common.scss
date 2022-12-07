@@ -13,7 +13,7 @@ main {
     position: absolute;
     left: 0;
     top: 0;
-    height: 140vh;
+    height: 155vh;
   }
 }
 
@@ -49,6 +49,15 @@ canvas {
   bottom: 40vh;
   width: 200vw;
   height: 250vh;
+}
+
+#dummy {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 30vw;
+  background-color: #2f29e9;
+  z-index: 20;
 }
 
 /* 간격 셋팅 */
