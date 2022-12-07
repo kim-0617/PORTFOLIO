@@ -29,7 +29,16 @@
 
       padding: 20px;
       font-family: var(--font3);
-      text-align: left;
+      text-align: center;
+
+      p {
+        text-align: left;
+      }
+
+      .btn__wrap {
+        display: flex;
+        justify-content: center;
+      }
 
       /* 8 */
       .btn-8 {
@@ -38,7 +47,7 @@
         line-height: 42px;
         padding: 0;
         border: none;
-        margin-top: 10px;
+        margin-top: 40px;
         margin-right: 10px;
       }
       .btn-8 span {

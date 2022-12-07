@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function Slider({ src, index }) {
+function Slider({ src, index, data }) {
   const address = [
     // 소스보기, 데모보기
     [
@@ -9,23 +9,23 @@ function Slider({ src, index }) {
     ],
     [
       'https://github.com/kim-0617/codingclass/tree/main/site/site1.1',
-      'https://kim-0617.github.io/codingclass/site/site1.1/index.html',
+      'https://kim-0617.github.io/codingclass/site/site1.2/index.html',
     ],
     [
       'https://github.com/kim-0617/codingclass/tree/main/site/site1.2',
-      'https://kim-0617.github.io/codingclass/site/site1.2/index.html',
+      'https://kim-0617.github.io/codingclass/site/site1.1/index.html',
     ],
     [
       'https://github.com/kim-0617/codingclass/tree/main/site/site1.4',
       'https://kim-0617.github.io/codingclass/site/site1.4/index.html',
     ],
     [
-      'https://github.com/kim-0617/codingclass/tree/main/site/site1-responsive',
-      'https://kim-0617.github.io/codingclass/site/site1-responsive/index.html',
-    ],
-    [
       'https://github.com/kim-0617/codingclass/tree/main/site/site2-prev',
       'https://kim-0617.github.io/codingclass/site/site2-prev/index.html',
+    ],
+    [
+      'https://github.com/kim-0617/codingclass/tree/main/site/site1-responsive',
+      'https://kim-0617.github.io/codingclass/site/site1-responsive/index.html',
     ],
     [
       'https://github.com/kim-0617/codingclass/blob/main/javascript/effect/parallaxEffect07.html',
@@ -60,7 +60,7 @@ function Slider({ src, index }) {
       'https://kim-0617.github.io/codingclass/javascript/effect/gameEffect01.html',
     ],
     ['https://github.com/kim-0617/PHPClass/tree/main/php', 'http://als1702.dothome.co.kr/php/main/main.php'],
-    ['https://github.com/kim-0617/PHPTeamProject/tree/main/php', 'http://kkk5993.dothome.co.kr/'],
+    ['https://github.com/kim-0617/PHPTeamProject/tree/main/php', 'http://kkk5993.dothome.co.kr/php/main/main.php'],
     ['https://github.com/kim-0617/vueclass', 'https://vueclass17.web.app/'],
     ['https://github.com/kim-0617/vue_api', 'https://vueapi17-2b28a.web.app/'],
     ['https://github.com/kim-0617/react_api', 'https://cra02.netlify.app/'],
@@ -119,17 +119,18 @@ function Slider({ src, index }) {
   return (
     <>
       <div className="slider__detail">
-        <h3>웹표준을 준수한 사이트입니다.</h3>
+        <h3>{data.title}</h3>
         <p>
-          웹 표준 접근성에 따라 작업하였습니다. 웹 표준 접근성에 따라 작업하였습니다. 웹 표준 접근성에 따라
-          작업하였습니다. 웹 표준 접근성에 따라 작업하였습니다.
+          {data.desc}
         </p>
-        <button className="btn1 custom-btn btn-8">
-          <span onClick={onClickSource}>소스보기</span>
-        </button>
-        <button className="btn2 custom-btn btn-8">
-          <span onClick={onClickDemo}>데모보기</span>
-        </button>
+        <div className="btn__wrap">
+          <button className="btn1 custom-btn btn-8">
+            <span onClick={onClickSource}>소스보기</span>
+          </button>
+          <button className="btn2 custom-btn btn-8">
+            <span onClick={onClickDemo}>데모보기</span>
+          </button>
+        </div>
       </div>
       <img src={src} alt={`${index}번째 이미지`} />
     </>

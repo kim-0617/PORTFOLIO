@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Selector, Slider } from './';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import DESC from '../utils/info.json';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -75,30 +76,37 @@ function CodingWork() {
     if (e.target.tagName === 'A') {
       e.preventDefault();
       document.querySelectorAll('.menu__list li').forEach((li) => {
-        li.classList.remove('active');
+        li.className = '';
       });
       e.target.parentElement.classList.add('active');
       switch (e.target.innerText) {
         case '웹표준 코딩':
           setStack('Standard');
+          e.target.parentElement.classList.add('standard');
           break;
         case '반응형 사이트':
           setStack('Responsive');
+          e.target.parentElement.classList.add('responsive');
           break;
         case '이펙트':
           setStack('Effect');
+          e.target.parentElement.classList.add('effect');
           break;
         case '게임':
           setStack('Game');
+          e.target.parentElement.classList.add('games');
           break;
         case 'PHP':
           setStack('Php');
+          e.target.parentElement.classList.add('phpSite');
           break;
         case '뷰 사이트':
           setStack('VueSite');
+          e.target.parentElement.classList.add('vueSite');
           break;
         case '리액트 사이트':
           setStack('ReactSite');
+          e.target.parentElement.classList.add('reactSite');
           break;
         default:
           setStack('Standard');
@@ -131,14 +139,14 @@ function CodingWork() {
         >
           {type.map((x, i) => (
             <SwiperSlide key={x}>
-              <Slider src={x} index={i} />
+              <Slider src={x} index={i} data={DESC.items[i]} />
             </SwiperSlide>
           ))}
         </Swiper>
 
         <div className="menu">
           <ul className="menu__list" onClick={onClickMenu}>
-            <li className="active">
+            <li className="standard active">
               <a href="#">웹표준 코딩</a>
             </li>
             <li>

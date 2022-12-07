@@ -124,8 +124,26 @@
           li {
             display: inline-block;
             user-select: none;
-            &.active a {
-              color: var(--font-color5);
+            &.standard.active a {
+              color: rgb(167, 163, 208);
+            }
+            &.responsive.active a {
+              color: rgb(153, 145, 145);
+            }
+            &.effect.active a {
+              color: rgb(249, 209, 194);
+            }
+            &.games.active a {
+              color: rgb(238, 206, 135);
+            }
+            &.phpSite.active a {
+              color: rgb(185, 207, 193);
+            }
+            &.vueSite.active a {
+              color: rgb(250, 189, 163);
+            }
+            &.reactSite.active a {
+              color: rgb(177, 198, 223);
             }
             a {
               font-family: var(--font3);
