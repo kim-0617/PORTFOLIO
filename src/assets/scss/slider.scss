@@ -20,14 +20,16 @@
     }
     .slider__detail {
       position: absolute;
-      left: 29%;
-      top: -20px;
-      width: 300px;
-      display: flex;
-      justify-content: space-between;
-      transition: all 300ms;
-      position: relative;
-      transform: scale(0.9);
+      left: 50%;
+      bottom: 5%;
+      width: 17vw;
+      background: rgba(60, 17, 203, 0.3);
+      z-index: 100;
+      border-radius: 10px;
+
+      padding: 20px;
+      font-family: var(--font3);
+      text-align: left;
 
       /* 8 */
       .btn-8 {
@@ -36,6 +38,8 @@
         line-height: 42px;
         padding: 0;
         border: none;
+        margin-top: 10px;
+        margin-right: 10px;
       }
       .btn-8 span {
         position: relative;
@@ -71,7 +75,7 @@
         width: 100%;
       }
       .btn-8:hover {
-        background: transparent;
+        background: #fff;
       }
       .btn-8 span:hover {
         color: #c797eb;

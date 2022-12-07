@@ -79,7 +79,7 @@ function Rec() {
     var canvas = document.getElementById('Rcanvas'),
       context = canvas.getContext('2d'),
       recs = [],
-      numrecs = window.innerWidth > 900 ? 25 : 15,
+      numrecs = window.innerWidth > 900 ? 35 : 20,
       bounce = -0.6,
       gravity = 0.0001;
 

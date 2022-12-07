@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Slider({ src, index }) {
   const address = [
@@ -80,13 +80,54 @@ function Slider({ src, index }) {
     window.open(address[index][1]);
   };
 
+  useEffect(() => {
+    const bg = document.querySelectorAll('.slider__detail')[index];
+    const btn1 = document.querySelectorAll('.slider__detail .btn1')[index];
+    const btn2 = document.querySelectorAll('.slider__detail .btn2')[index];
+
+    if (index < 4) {
+      bg.style.background = '#392de44d';
+      // btn1.style.background = '#392de44d';
+      // btn2.style.background = '#392de44d';
+    } else if (index < 6) {
+      bg.style.background = '#dfdfdfb0';
+      // btn1.style.background = '#dfdfdfb0';
+      // btn2.style.background = '#dfdfdfb0';
+    } else if (index < 10) {
+      bg.style.background = '#f9d1c294';
+      // btn1.style.background = '#f9d1c294';
+      // btn2.style.background = '#f9d1c294';
+    } else if (index < 14) {
+      bg.style.background = '#eecd876b';
+      // btn1.style.background = '#eecd876b';
+      // btn2.style.background = '#eecd876b';
+    } else if (index < 16) {
+      bg.style.background = '#bacfc2ab';
+      // btn1.style.background = '#bacfc2ab';
+      // btn2.style.background = '#bacfc2ab';
+    } else if (index < 18) {
+      bg.style.background = '#f6b69da1';
+      // btn1.style.background = '#f6b69da1';
+      // btn2.style.background = '#f6b69da1';
+    } else {
+      bg.style.background = '#acc1d99e';
+      // btn1.style.background = '#acc1d99e';
+      // btn2.style.background = '#acc1d99e';
+    }
+  }, [index]);
+
   return (
     <>
       <div className="slider__detail">
-        <button className="custom-btn btn-8">
+        <h3>웹표준을 준수한 사이트입니다.</h3>
+        <p>
+          웹 표준 접근성에 따라 작업하였습니다. 웹 표준 접근성에 따라 작업하였습니다. 웹 표준 접근성에 따라
+          작업하였습니다. 웹 표준 접근성에 따라 작업하였습니다.
+        </p>
+        <button className="btn1 custom-btn btn-8">
           <span onClick={onClickSource}>소스보기</span>
         </button>
-        <button className="custom-btn btn-8">
+        <button className="btn2 custom-btn btn-8">
           <span onClick={onClickDemo}>데모보기</span>
         </button>
       </div>
