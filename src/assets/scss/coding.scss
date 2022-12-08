@@ -10,7 +10,7 @@
     position: relative;
     // padding: 30vh 0 45vh 0;
     .CodingIntro__inner {
-      padding: 20vw 0 30vw 0;
+      padding: 15vw 0 15vw 0;
 
       > div {
         font-size: 15vw;
@@ -115,9 +115,10 @@
         background-color: #f5f5f5;
         border-radius: 10px;
         width: 81vw;
-        height: 230px;
-        margin-top: 10px;
+        height: 20vh;
+        margin-top: 15px;
         padding: 1.3vw;
+        padding-left: 2vw;
 
         .menu__list {
           margin-bottom: 1vw;
@@ -160,16 +161,25 @@
         .menu__conts {
           width: 100%;
           display: flex;
+          align-items: center;
+          margin-top: 25px;
           > div {
-            width: 6vw;
-            height: 7vw;
+            width: 85px;
+            height: 85px;
             cursor: pointer;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center 10px;
             border: 7px solid #15bab8;
             margin-right: 2vw;
             background-size: contain;
             border-radius: 5px;
+            transition: border-radius 1s;
+            &:hover {
+              border-radius: 100px;
+            }
+            &.bdrs {
+              border-radius: 100px;
+            }
           }
         }
       }

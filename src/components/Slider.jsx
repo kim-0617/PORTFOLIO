@@ -120,14 +120,12 @@ function Slider({ src, index, data }) {
     <>
       <div className="slider__detail">
         <h3>{data.title}</h3>
-        <p>
-          {data.desc}
-        </p>
+        <p>{data.desc}</p>
         <div className="btn__wrap">
-          <button className="btn1 custom-btn btn-8">
+          <button className="btn1">
             <span onClick={onClickSource}>소스보기</span>
           </button>
-          <button className="btn2 custom-btn btn-8">
+          <button className="btn2">
             <span onClick={onClickDemo}>데모보기</span>
           </button>
         </div>

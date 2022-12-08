@@ -1,5 +1,6 @@
-import React, { forwardRef, useEffect } from 'react';
-import { mapping } from '../components/CodingWork';
+import React, { forwardRef, useEffect, useContext } from 'react';
+import { mapping, reverseMapping } from '../components/CodingWork';
+import { ChangeContext } from '../context/ChangeContext';
 
 function VueSite(prop, ref) {
   useEffect(() => {
@@ -11,9 +12,25 @@ function VueSite(prop, ref) {
     });
   }, []);
 
+  const { index } = useContext(ChangeContext);
+
+  useEffect(() => {
+    document.querySelectorAll('.bdrs').forEach((r) => {
+      r.classList.remove('bdrs');
+    });
+
+    document.querySelector(`.${reverseMapping[index]}`)?.classList.add('bdrs');
+  }, [index]);
+
   const onClickSite = (e) => {
     if (e.target.className !== 'menu__conts') {
-      ref.current.swiper.slideTo(mapping[e.target.className]);
+      document.querySelectorAll('.bdrs').forEach((r) => {
+        r.classList.remove('bdrs');
+      });
+
+      e.target.classList.add('bdrs');
+      const name = e.target.className.replace('bdrs', '');
+      ref.current.swiper.slideTo(mapping[name]);
     }
   };
 

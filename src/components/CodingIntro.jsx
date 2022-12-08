@@ -50,9 +50,9 @@ function CodingIntro() {
             <span className="line particletext bubbles">coding</span>
           </div>
         </div>
-        <div className="bubble">
+        {/* <div className="bubble">
           <span className="ir">비눗방울</span>
-        </div>
+        </div> */}
       </article>
     </>
   );

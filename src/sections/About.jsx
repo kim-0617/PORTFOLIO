@@ -16,6 +16,12 @@ function About() {
     if (window.scrollY >= 923 - window.innerHeight / 3) {
       setScroll(true);
     }
+
+    if (window.scrollY >= 3500) {
+      document.querySelector('#intro').style.background = '#f64c0e';
+    } else {
+      document.querySelector('#intro').style.background = '#0000e9';
+    }
   };
 
   return (

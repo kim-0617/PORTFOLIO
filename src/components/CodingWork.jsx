@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Selector, Slider } from './';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DESC from '../utils/info.json';
+import { ChangeContext } from '../context/ChangeContext';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -41,35 +42,66 @@ const type = [
 ];
 
 export const mapping = {
-  oneOne: 0,
-  oneTwo: 1,
-  oneThree: 2,
-  oneFour: 3,
-  twoOne: 4,
-  twoTwo: 5,
-  threeOne: 6,
-  threeTwo: 7,
-  threeThree: 8,
-  threeFour: 9,
-  fourOne: 10,
-  fourTwo: 11,
-  fourThree: 12,
-  fourFour: 13,
-  fiveOne: 14,
-  fiveTwo: 15,
-  sixOne: 16,
-  sixTwo: 17,
-  sevenOne: 18,
-  sevenTwo: 19,
-  sevenThree: 20,
-  sevenFour: 21,
-  sevenFive: 22,
-  sevenSix: 23,
-  sevenSeven: 24,
+  'oneOne ': 0,
+  'oneTwo ': 1,
+  'oneThree ': 2,
+  'oneFour ': 3,
+  'twoOne ': 4,
+  'twoTwo ': 5,
+  'threeOne ': 6,
+  'threeTwo ': 7,
+  'threeThree ': 8,
+  'threeFour ': 9,
+  'fourOne ': 10,
+  'fourTwo ': 11,
+  'fourThree ': 12,
+  'fourFour ': 13,
+  'fiveOne ': 14,
+  'fiveTwo ': 15,
+  'sixOne ': 16,
+  'sixTwo ': 17,
+  'sevenOne ': 18,
+  'sevenTwo ': 19,
+  'sevenThree ': 20,
+  'sevenFour ': 21,
+  'sevenFive ': 22,
+  'sevenSix ': 23,
+  'sevenSeven ': 24,
 };
+
+export const reverseMapping = {
+  0: 'oneOne',
+  1: 'oneTwo',
+  2: 'oneThree',
+  3: 'oneFour',
+  4: 'twoOne',
+  5: 'twoTwo',
+  6: 'threeOne',
+  7: 'threeTwo',
+  8: 'threeThree',
+  9: 'threeFour',
+  10: 'fourOne',
+  11: 'fourTwo',
+  12: 'fourThree',
+  13: 'fourFour',
+  14: 'fiveOne',
+  15: 'fiveTwo',
+  16: 'sixOne',
+  17: 'sixTwo',
+  18: 'sevenOne',
+  19: 'sevenTwo',
+  20: 'sevenThree',
+  21: 'sevenFour',
+  22: 'sevenFive',
+  23: 'sevenSix',
+  24: 'sevenSeven',
+};
+
+const indexMapping = {};
 
 function CodingWork() {
   const [stack, setStack] = useState('Standard');
+  const [index, setIndex] = useState(0);
   const swiperRef = useRef(null);
 
   const onClickMenu = (e) => {
@@ -115,63 +147,98 @@ function CodingWork() {
     }
   };
 
-  return (
-    <article id="CodingWork">
-      <h2>Work coding</h2>
-      <p>작업물을 슬라이드 형식으로 보여드립니다.</p>
-      <div className="CodingWork__inner">
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 10,
-            stretch: 100,
-            depth: 500,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          pagination={{ clickable: true }}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          ref={swiperRef}
-          className="mySwiper"
-        >
-          {type.map((x, i) => (
-            <SwiperSlide key={x}>
-              <Slider src={x} index={i} data={DESC.items[i]} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  const onActiveIndexChange = function () {
+    let i = this.realIndex;
+    setIndex(i);
 
-        <div className="menu">
-          <ul className="menu__list" onClick={onClickMenu}>
-            <li className="standard active">
-              <a href="#">웹표준 코딩</a>
-            </li>
-            <li>
-              <a href="#">반응형 사이트</a>
-            </li>
-            <li>
-              <a href="#">이펙트</a>
-            </li>
-            <li>
-              <a href="#">게임</a>
-            </li>
-            <li>
-              <a href="#">PHP</a>
-            </li>
-            <li>
-              <a href="#">뷰 사이트</a>
-            </li>
-            <li>
-              <a href="#">리액트 사이트</a>
-            </li>
-          </ul>
-          <Selector value={stack} ref={swiperRef} />
+    document.querySelectorAll('.menu__list li').forEach((li) => {
+      li.className = '';
+    });
+
+    if (i < 4) {
+      setStack('Standard');
+      document.querySelectorAll('.menu__list li')[0].classList.add('active', 'standard');
+    } else if (i < 6) {
+      setStack('Responsive');
+      document.querySelectorAll('.menu__list li')[1].classList.add('active', 'responsive');
+    } else if (i < 10) {
+      setStack('Effect');
+      document.querySelectorAll('.menu__list li')[2].classList.add('active', 'effect');
+    } else if (i < 14) {
+      setStack('Game');
+      document.querySelectorAll('.menu__list li')[3].classList.add('active', 'games');
+    } else if (i < 16) {
+      setStack('Php');
+      document.querySelectorAll('.menu__list li')[4].classList.add('active', 'phpSite');
+    } else if (i < 18) {
+      setStack('VueSite');
+      document.querySelectorAll('.menu__list li')[5].classList.add('active', 'vueSite');
+    } else {
+      setStack('ReactSite');
+      document.querySelectorAll('.menu__list li')[6].classList.add('active', 'reactSite');
+    }
+  };
+
+  return (
+    <ChangeContext.Provider value={{ index, stack }}>
+      <article id="CodingWork">
+        <h2>Work coding</h2>
+        <p>작업물을 슬라이드 형식으로 보여드립니다.</p>
+        <div className="CodingWork__inner">
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={'auto'}
+            coverflowEffect={{
+              rotate: 10,
+              stretch: 100,
+              depth: 500,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            pagination={{ clickable: true }}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            ref={swiperRef}
+            onActiveIndexChange={onActiveIndexChange}
+            className="mySwiper"
+          >
+            {type.map((x, i) => (
+              <SwiperSlide key={x}>
+                <Slider src={x} index={i} data={DESC.items[i]} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <div className="menu">
+            <ul className="menu__list" onClick={onClickMenu}>
+              <li className="standard active">
+                <a href="#">웹표준 코딩</a>
+              </li>
+              <li>
+                <a href="#">반응형 사이트</a>
+              </li>
+              <li>
+                <a href="#">이펙트</a>
+              </li>
+              <li>
+                <a href="#">게임</a>
+              </li>
+              <li>
+                <a href="#">PHP</a>
+              </li>
+              <li>
+                <a href="#">뷰 사이트</a>
+              </li>
+              <li>
+                <a href="#">리액트 사이트</a>
+              </li>
+            </ul>
+            <Selector value={stack} ref={swiperRef} />
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </ChangeContext.Provider>
   );
 }
 
