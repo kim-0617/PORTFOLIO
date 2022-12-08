@@ -210,7 +210,7 @@
       font-size: 7vw;
       font-family: var(--font2);
       text-align: center;
-      padding-top: 10vw;
+      padding-top: 5vw;
       line-height: 1;
       margin-bottom: 20px;
       text-transform: uppercase;
@@ -252,6 +252,7 @@
             margin-right: 10%;
             font-family: var(--font1);
             font-weight: 400;
+            word-break: keep-all;
           }
 
           .list__conts__detail__desc {
@@ -289,6 +290,21 @@
   a {
     &::before {
       background: none !important;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  #coding {
+    #CodingIntro {
+      .CodingIntro__inner {
+        &::after {
+          background-image: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/be922086e7b9947b20b067ddf3c0b458ae591517/public/image/workwave3.svg');
+        }
+      }
+    }
+    #CodingWork {
+      display: none;
     }
   }
 }
@@ -343,6 +359,22 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #coding {
+    #CodingIntro {
+      padding-bottom: 20vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #coding {
+    #CodingIntro {
+      padding-bottom: 20vw;
     }
   }
 }

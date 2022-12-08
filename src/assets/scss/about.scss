@@ -156,7 +156,7 @@
       }
 
       .skill__conts {
-        width: 55%;
+        width: 50%;
         margin-bottom: 4.5vw;
         font-family: var(--font1);
         .skill__conts__detail {
@@ -164,16 +164,14 @@
           border-top: 1px solid var(--font-color3);
           padding: 1.5vw 0;
           font-size: 1.15vw;
-          word-break: keep-all;
 
           .skill__conts__detail__title {
-            width: 27%;
-            margin-right: 27%;
+            width: 23%;
+            margin-right: 20%;
           }
 
           .skill__conts__detail__desc {
-            width: 45%;
-            word-break: keep-all;
+            width: 55%;
             line-height: 1.5;
           }
 
@@ -206,11 +204,13 @@
           .focus__conts__detail {
             h3 {
               text-align: center;
+              font-size: 14px;
               margin-bottom: 5px;
             }
             p {
+              font-size: 12px;
               margin: 0 auto;
-              width: 65%;
+              width: 100%;
               margin-bottom: 20px;
             }
           }

@@ -22,7 +22,7 @@
       position: absolute;
       left: 50%;
       bottom: 5%;
-      width: 17vw;
+      width: 20vw;
       background: rgba(60, 17, 203, 0.3);
       z-index: 100;
       border-radius: 10px;
@@ -139,6 +139,17 @@
       }
       .btn-8 span:hover:after {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .swiper {
+    .slider__detail {
+      p {
+        text-align: left;
+        @include row3;
       }
     }
   }

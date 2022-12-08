@@ -17,7 +17,7 @@ function About() {
       setScroll(true);
     }
 
-    if (window.scrollY >= 3500) {
+    if (window.scrollY >= window.innerHeight * 2.5) {
       document.querySelector('#intro').style.background = '#f64c0e';
     } else {
       document.querySelector('#intro').style.background = '#0000e9';
