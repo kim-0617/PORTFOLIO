@@ -30,7 +30,7 @@ function Ball() {
 
       context.lineWidth = this.lineWidth;
       context.fillStyle = this.color;
-      context.strokeStyle = '#5fc8d8';
+      context.strokeStyle = '#fff';
       context.stroke();
       context.beginPath();
       //x, y, radius, start_angle, end_angle, anti-clockwise
