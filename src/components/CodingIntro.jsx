@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 // import { Bubble } from '../others';
 
 function CodingIntro() {
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     function bubbles() {
       $.each($('.particletext.bubbles'), function () {
@@ -31,6 +35,63 @@ function CodingIntro() {
       return Math.floor(Math.random() * (n - m + 1)) + m;
     };
     bubbles();
+
+    const tl = gsap.timeline();
+    gsap.set('.work1', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+    gsap.set('.work2', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+    gsap.set('.work3', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+    gsap.set('.coding1', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+    gsap.set('.coding2', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+    gsap.set('.coding3', {
+      webkitTextFillColor: 'transparent',
+      webkitTextStroke: '2px #fff',
+    });
+
+    tl.to('.work1', {
+      duration: 1,
+      webkitTextFillColor: '#fff',
+      ease: 'power3.in',
+      scrollTrigger: {
+        trigger: '.work1',
+        scrub: 1,
+        end: '-=500',
+      },
+    });
+    tl.to('.coding2', {
+      duration: 1,
+      webkitTextFillColor: '#fff',
+      ease: 'power3.in',
+      scrollTrigger: {
+        trigger: '.coding2',
+        scrub: 1,
+        end: '+=500',
+      },
+    });
+    tl.to('.work3', {
+      duration: 1,
+      webkitTextFillColor: '#fff',
+      ease: 'power3.in',
+      scrollTrigger: {
+        trigger: '.work3',
+        scrub: 1,
+        end: '+=500',
+      },
+    });
   }, []);
 
   return (
@@ -38,16 +99,16 @@ function CodingIntro() {
       <article id="CodingIntro">
         <div className="CodingIntro__inner">
           <div>
-            <span className="particletext bubbles space">work</span>
-            <span className="line particletext bubbles">coding</span>
+            <span className="particletext bubbles space work1">work</span>
+            <span className="line particletext bubbles coding1">coding</span>
           </div>
           <div>
-            <span className="line particletext bubbles space">work</span>
-            <span className="particletext bubbles">coding</span>
+            <span className="line particletext bubbles space work2">work</span>
+            <span className="particletext bubbles coding2">coding</span>
           </div>
           <div>
-            <span className="particletext bubbles space">work</span>
-            <span className="line particletext bubbles">coding</span>
+            <span className="particletext bubbles space work3">work</span>
+            <span className="line particletext bubbles coding3">coding</span>
           </div>
         </div>
         {/* <div className="bubble">
