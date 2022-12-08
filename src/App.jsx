@@ -40,15 +40,15 @@ function App() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 3.5,
+      duration: 2.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
       direction: 'vertical', // vertical, horizontal
       gestureDirection: 'vertical', // vertical, horizontal, both
       smooth: true,
       mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 50,
-      infinite: false,
+      smoothTouch: true,
+      touchMultiplier: 10,
+      infinite: true,
     });
 
     //get scroll value

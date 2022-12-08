@@ -299,7 +299,7 @@
     #CodingIntro {
       .CodingIntro__inner {
         &::after {
-          background-image: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/be922086e7b9947b20b067ddf3c0b458ae591517/public/image/workwave3.svg');
+          background-image: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/26ddfb2768ecd15f5f1cf1247046b2083e9f75cb/public/image/workwave3.svg');
         }
       }
     }
@@ -366,15 +366,13 @@
 @media (max-width: 768px) {
   #coding {
     #CodingIntro {
-      padding-bottom: 20vw;
+      padding-bottom: 16vw;
     }
-  }
-}
 
-@media (max-width: 768px) {
-  #coding {
-    #CodingIntro {
-      padding-bottom: 20vw;
+    #CodingWorkList {
+      h2 {
+        padding-top: 0;
+      }
     }
   }
 }

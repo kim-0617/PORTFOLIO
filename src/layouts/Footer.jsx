@@ -12,7 +12,7 @@ function Footer() {
   });
 
   const onClickFooter = (e) => {
-    if (e.target.tagName === 'A') {
+    if (e.target.tagName === 'A' && !e.target.classList.contains('not')) {
       e.preventDefault();
       document.querySelector(e.target.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
@@ -37,13 +37,13 @@ function Footer() {
               <a href="header">Home</a>
             </li>
             <li>
-              <a href="#intro">About Me</a>
+              <a href="#about">About Me</a>
             </li>
             <li>
               <a href="#coding">My Working</a>
             </li>
             <li>
-              <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
+              <a className="not" href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
                 Contact Us
               </a>
             </li>
@@ -66,7 +66,7 @@ function Footer() {
               </li>
               <li>
                 <a href="#" title="myphone">
-                  010-1234-5678
+                  010-3351-0617
                 </a>
               </li>
               <li>

@@ -11,7 +11,7 @@ function CodingIntro() {
       $.each($('.particletext.bubbles'), function () {
         var bubblecount = ($(this).width() / 50) * 1.2;
         for (var i = 0; i <= bubblecount; i++) {
-          var size = $.rnd(40, 80) / 10;
+          var size = $.rnd(30, 50) / 10;
           $(this).append(
             '<span class="particle" style="top:' +
               $.rnd(20, 80) +
