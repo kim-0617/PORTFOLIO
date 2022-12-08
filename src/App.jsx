@@ -48,7 +48,7 @@ function App() {
       mouseMultiplier: 1,
       smoothTouch: true,
       touchMultiplier: 10,
-      infinite: true,
+      infinite: false,
     });
 
     //get scroll value
