@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { Ball, BallDown } from '../others';
 
-function Intro() {
+function Intro({ isLoading }) {
   const [isDown, setIsDown] = useState(true);
   const [isDone, setIsDone] = useState(false);
   const tl = gsap.timeline();
@@ -37,8 +37,15 @@ function Intro() {
   };
 
   useEffect(() => {
-    if (isDone) return;
+    if (isLoading) {
+      setIsDown(false);
+    } else {
+      setIsDown(true);
+    }
+  }, [isLoading]);
 
+  useEffect(() => {
+    if (isDone) return;
     /** 텍스트 쪽 애니메이션 */
     const canvas = document.querySelector('#canvas');
     // .to(titleRef.current, { duration: 1.5, text: 'PORT <br> FOLIO', ease: 'steps(12)' })
@@ -50,6 +57,7 @@ function Intro() {
     gsap.set(secondTarget.current, { y: window.innerWidth > 900 ? '-5%' : '-15%', opacity: 0 }); // 물감통
     gsap.set(thirdTarget.current, { top: window.innerWidth > 900 ? '50vw' : '200vw', opacity: 0, rotate: 0 }); // 핸드폰
 
+    if (isLoading) return;
     setTimeout(() => {
       setIsDone(true);
     }, 3500);
@@ -78,7 +86,7 @@ function Intro() {
           ease: 'power3.in',
         });
     }, 1900);
-  }, []);
+  }, [isLoading]);
 
   useEffect(() => {
     if (!isDone) return;

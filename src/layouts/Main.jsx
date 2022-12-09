@@ -1,5 +1,6 @@
 import { Intro, About, Coding, Dummy } from '../sections';
-import React from 'react';
+import React, { useState } from 'react';
+import { ImgLoader } from '../others';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import { Loader, VLoader } from '../others';
@@ -7,7 +8,7 @@ import React from 'react';
 // gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // useEffect(() => {
   //   if (isLoading) return;
@@ -33,19 +34,27 @@ function Main() {
 
   return (
     <main id="main">
-      {/* {isLoading ? (
-        <VLoader isLoading={isLoading} setIsLoading={setIsLoading} />
-      ) : (
+      {/* <>
+        <ImgLoader setIsLoading={setIsLoading} />
+        <Intro isLoading={isLoading} />
+        <About />
+        <Dummy />
+        <Coding />
+      </> */}
+
+      {isLoading ? (
         <>
-          <Intro />
-          <About />
+          <ImgLoader setIsLoading={setIsLoading} />
           <Coding />
         </>
-      )} */}
-      <Intro />
-      <About />
-      <Dummy />
-      <Coding />
+      ) : (
+        <>
+          <Intro isLoading={isLoading} />
+          <About />
+          <Dummy />
+          <Coding />
+        </>
+      )}
     </main>
   );
 }

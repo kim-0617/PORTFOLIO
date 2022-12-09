@@ -3,23 +3,23 @@ main {
   position: relative;
 }
 
-.canvas__inner {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-
-  #Dcanvas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 155vh;
-  }
-}
-
 canvas {
   position: absolute;
   z-index: 2;
+}
+
+.canvas__inner {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100vh !important;
+
+  #Dcanvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 160vh !important;
+  }
 }
 
 .custom-btn {
@@ -58,6 +58,43 @@ canvas {
   height: 50vw;
   background-color: #2f29e9;
   z-index: 20;
+}
+
+/* 로딩 */
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: var(--font-color1);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font2);
+  z-index: 9999;
+  text-transform: uppercase;
+  overflow-y: hidden;
+}
+
+.loading__ani {
+  font-size: 2vw;
+}
+
+.loading__text {
+  font-size: 1.5vw;
+}
+
+@media (max-width: 486px) {
+  .loading__ani {
+    font-size: 28px;
+  }
+
+  .loading__text {
+    font-size: 20px;
+  }
 }
 
 /* 간격 셋팅 */

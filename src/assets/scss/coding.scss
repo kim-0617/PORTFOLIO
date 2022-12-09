@@ -278,39 +278,43 @@
                     font-size: 12px;
                   }
                 }
-                &.hover-underline-animation {
-                  display: inline-block;
-                  position: relative;
-                  color: var(--font-color2);
-                }
+                // &.hover-underline-animation {
+                //   display: inline-block;
+                //   position: relative;
+                //   color: var(--font-color2);
+                // }
 
-                &.hover-underline-animation::after {
-                  content: '';
-                  position: absolute;
-                  width: 100%;
-                  height: 3px;
-                  transform: scaleX(0);
-                  bottom: -1px;
-                  left: 0;
-                  background-color: #0087ca;
-                  transform-origin: bottom right;
-                  transition: transform 0.5s ease-out;
-                }
+                // &.hover-underline-animation::after {
+                //   content: '';
+                //   position: absolute;
+                //   width: 100%;
+                //   height: 3px;
+                //   transform: scaleX(0);
+                //   bottom: -1px;
+                //   left: 0;
+                //   background-color: #0087ca;
+                //   transform-origin: bottom right;
+                //   transition: transform 0.5s ease-out;
+                // }
 
-                &.hover-underline-animation:hover::after {
-                  transform: scaleX(1);
-                  transform-origin: bottom left;
-                }
+                // &.hover-underline-animation:hover::after {
+                //   transform: scaleX(1);
+                //   transform-origin: bottom left;
+                // }
 
+                &:hover::before {
+                  background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/296a2bb993c6a53bcefd0d6cf14846ba630c7b7d/public/image/checkFill.svg')
+                    no-repeat center / contain;
+                }
                 &::before {
                   content: '';
                   position: absolute;
                   left: 19vw;
-                  top: -8px;
-                  background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/38076174125279e822942a176371d79ada30fc63/public/image/svg/check.svg')
+                  top: -2px;
+                  background: url('https://raw.githubusercontent.com/kim-0617/PORTFOLIO/296a2bb993c6a53bcefd0d6cf14846ba630c7b7d/public/image/check.svg')
                     no-repeat center / contain;
-                  width: 34px;
-                  height: 36px;
+                  width: 24px;
+                  height: 26px;
                 }
               }
             }

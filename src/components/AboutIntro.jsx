@@ -49,7 +49,12 @@ function AboutIntro({ scroll }) {
       <div className="aboutIntro__inner">
         <h2 ref={titleRef}>ABOUT</h2>
         <div className="aImg" ref={thirdTarget}>
-          <img src="image/about.png" alt="어바웃페이지 사진입니다." ref={thirdTargetChild} />
+          <img
+            style={{ userSelect: 'none' }}
+            src="image/about.png"
+            alt="어바웃페이지 사진입니다."
+            ref={thirdTargetChild}
+          />
         </div>
         <div className="calc" ref={firstTarget}>
           <span className="ir">계산기그림</span>
