@@ -11,34 +11,22 @@ function CodingWorkList() {
             <h3 className="list__conts__detail__title">웹 표준 사이트</h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://kim-0617.github.io/codingclass/site/site1.1/index.html"
-                >
+                <a target="_blank" className="" href="https://kim-0617.github.io/codingclass/site/site1.1/index.html">
                   사이트 01
                 </a>
               </li>
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://kim-0617.github.io/codingclass/site/site1.2/index.html"
-                >
+                <a target="_blank" className="" href="https://kim-0617.github.io/codingclass/site/site1.2/index.html">
                   사이트 02
                 </a>
               </li>
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://kim-0617.github.io/codingclass/site/site1.4/index.html"
-                >
+                <a target="_blank" className="" href="https://kim-0617.github.io/codingclass/site/site1.4/index.html">
                   사이트 03
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://github.com/kim-0617/algorithm">
+                <a target="_blank" className="" href="https://github.com/kim-0617/algorithm">
                   <span>알고리즘</span>
                   <span className="sf">(프로그래머스)</span>
                 </a>
@@ -53,7 +41,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/gameEffect01.html"
                 >
                   테트리스 게임
@@ -62,7 +50,7 @@ function CodingWorkList() {
               <li className="checknone">
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/gameEffect01.html"
                 >
                   CSS 속성 서치 게임
@@ -71,7 +59,7 @@ function CodingWorkList() {
               <li className="checknone">
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/gameEffect01.html"
                 >
                   메모리 카드 게임
@@ -80,7 +68,7 @@ function CodingWorkList() {
               <li className="checknone">
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/gameEffect01.html"
                 >
                   뮤직 플레이어
@@ -96,7 +84,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/site/site2-prev/index.html"
                 >
                   <span>반응형 사이트 01</span>
@@ -108,7 +96,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/site/site1-responsive/index.html"
                 >
                   <span>반응형 사이트 02</span>
@@ -125,21 +113,13 @@ function CodingWorkList() {
             <h3 className="list__conts__detail__title">PHP</h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="http://als1702.dothome.co.kr/php/main/main.php"
-                >
+                <a target="_blank" className="" href="http://als1702.dothome.co.kr/php/main/main.php">
                   <span>PHP BLOG</span>
                   <span className="sf">(MYSQL)</span>
                 </a>
               </li>
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="http://kkk5993.dothome.co.kr/php/main/main.php"
-                >
+                <a target="_blank" className="" href="http://kkk5993.dothome.co.kr/php/main/main.php">
                   <span>PHP SITE</span>
                   <span className="sf">(MYSQL)</span>
                 </a>
@@ -154,7 +134,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/quizEffect06.html"
                 >
                   <span>퀴즈 이펙트</span>
@@ -166,7 +146,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/sliderEffect07.html"
                 >
                   <span>슬라이더 이펙트</span>
@@ -178,7 +158,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/mouseEffect06.html"
                 >
                   <span>마우스 이펙트</span>
@@ -190,7 +170,7 @@ function CodingWorkList() {
               <li>
                 <a
                   target="_blank"
-                  className="hover-underline-animation"
+                  className=""
                   href="https://kim-0617.github.io/codingclass/javascript/effect/parallaxEffect07.html"
                 >
                   <span>페럴렉스 이펙트</span>
@@ -207,29 +187,25 @@ function CodingWorkList() {
             <h3 className="list__conts__detail__title">리액트</h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://github.com/kim-0617/sleact/tree/main/alecture"
-                >
+                <a target="_blank" className="" href="https://github.com/kim-0617/sleact/tree/main/alecture">
                   <span>슬랙 클론코딩</span>
                   <span className="sf">(TypeScript, SWR, SOCKETIO)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://github.com/kim-0617/react-blog">
+                <a target="_blank" className="" href="https://github.com/kim-0617/react-blog">
                   <span>리액트 블로그</span>
                   <span className="sf">(REACT, MONGO DB, EXPRESS)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://cra02.netlify.app/">
+                <a target="_blank" className="" href="https://cra02.netlify.app/">
                   <span>API SITE</span>
                   <span className="sf">(Youtube, TMDB, Unsplash)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://mydiary-f4e5d.web.app/login">
+                <a target="_blank" className="" href="https://mydiary-f4e5d.web.app/login">
                   <span>React Diary</span>
                   <span className="sf">(firebase Auth, firestore)</span>
                 </a>
@@ -245,7 +221,7 @@ function CodingWorkList() {
             </h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://codepen.io/kim-0617/pen/XWqzpOZ">
+                <a target="_blank" className="" href="https://codepen.io/kim-0617/pen/XWqzpOZ">
                   <span>Eye Moving</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -253,7 +229,7 @@ function CodingWorkList() {
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://codepen.io/kim-0617/pen/MWGvXyW">
+                <a target="_blank" className="" href="https://codepen.io/kim-0617/pen/MWGvXyW">
                   <span>Spnning Rect</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -261,7 +237,7 @@ function CodingWorkList() {
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://codepen.io/kim-0617/pen/gOzxYjy">
+                <a target="_blank" className="" href="https://codepen.io/kim-0617/pen/gOzxYjy">
                   <span>Text Spinning</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -269,7 +245,7 @@ function CodingWorkList() {
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://codepen.io/kim-0617/pen/vYjZXVd">
+                <a target="_blank" className="" href="https://codepen.io/kim-0617/pen/vYjZXVd">
                   <span>Mouse Hover</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -277,7 +253,7 @@ function CodingWorkList() {
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://codepen.io/kim-0617/pen/zYjvRXR">
+                <a target="_blank" className="" href="https://codepen.io/kim-0617/pen/zYjvRXR">
                   <span>Walking Man</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -292,33 +268,25 @@ function CodingWorkList() {
             <h3 className="list__conts__detail__title">리액트 02</h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://github.com/kim-0617/react_youtube"
-                >
+                <a target="_blank" className="" href="https://github.com/kim-0617/react_youtube">
                   <span>개발자 유튜브 정보 사이트</span>
                   <span className="sf">(반응형)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://github.com/kim-0617/react_music">
+                <a target="_blank" className="" href="https://github.com/kim-0617/react_music">
                   <span>음악 사이트</span>
                   <span className="sf">(React player, youtube Music)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://github.com/kim-0617/react-voca">
+                <a target="_blank" className="" href="https://github.com/kim-0617/react-voca">
                   <span>리액트 단어앱</span>
                   <span className="sf">(TypeScript, JSON SERVER)</span>
                 </a>
               </li>
               <li>
-                <a
-                  target="_blank"
-                  className="hover-underline-animation"
-                  href="https://github.com/kim-0617/redux-tutorial"
-                >
+                <a target="_blank" className="" href="https://github.com/kim-0617/redux-tutorial">
                   <span>리덕스 학습 (Redux)</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space
@@ -326,7 +294,7 @@ function CodingWorkList() {
                 </a>
               </li>
               <li>
-                <a target="_blank" className="hover-underline-animation" href="https://github.com/kim-0617/nodejs">
+                <a target="_blank" className="" href="https://github.com/kim-0617/nodejs">
                   <span>express, passport 학습</span>
                   <span className="sf" style={{ visibility: 'hidden' }}>
                     space

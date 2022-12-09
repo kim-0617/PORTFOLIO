@@ -90,29 +90,29 @@ function Slider({ src, index, data }) {
       // btn1.style.background = '#392de44d';
       // btn2.style.background = '#392de44d';
     } else if (index < 6) {
-      bg.style.background = '#dfdfdfb0';
-      // btn1.style.background = '#dfdfdfb0';
-      // btn2.style.background = '#dfdfdfb0';
+      bg.style.background = '#6e6e6ec7';
+      // btn1.style.background = '#6e6e6ec7';
+      // btn2.style.background = '#6e6e6ec7';
     } else if (index < 10) {
-      bg.style.background = '#f9d1c294';
-      // btn1.style.background = '#f9d1c294';
-      // btn2.style.background = '#f9d1c294';
+      bg.style.background = '#ef7345b3';
+      // btn1.style.background = '#ef7345b3';
+      // btn2.style.background = '#ef7345b3';
     } else if (index < 14) {
-      bg.style.background = '#eecd876b';
-      // btn1.style.background = '#eecd876b';
-      // btn2.style.background = '#eecd876b';
+      bg.style.background = '#d39d2ad1';
+      // btn1.style.background = '#d39d2ad1';
+      // btn2.style.background = '#d39d2ad1';
     } else if (index < 16) {
-      bg.style.background = '#bacfc2ab';
-      // btn1.style.background = '#bacfc2ab';
-      // btn2.style.background = '#bacfc2ab';
+      bg.style.background = '#44895eb8';
+      // btn1.style.background = '#44895eb8';
+      // btn2.style.background = '#44895eb8';
     } else if (index < 18) {
-      bg.style.background = '#f6b69da1';
-      // btn1.style.background = '#f6b69da1';
-      // btn2.style.background = '#f6b69da1';
+      bg.style.background = '#ffa07ba1';
+      // btn1.style.background = '#ffa07ba1';
+      // btn2.style.background = '#ffa07ba1';
     } else {
-      bg.style.background = '#acc1d99e';
-      // btn1.style.background = '#acc1d99e';
-      // btn2.style.background = '#acc1d99e';
+      bg.style.background = '#697f99b0';
+      // btn1.style.background = '#697f99b0';
+      // btn2.style.background = '#697f99b0';
     }
   }, [index]);
 
