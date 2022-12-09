@@ -60,8 +60,13 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
+                <a href="mailto:kimsh5993@gmail.com" title="gmail" rel="noopener noreferrer">
                   kimsh5993@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:kkk5993@naver.com" title="naver" target="_blank" rel="noopener noreferrer">
+                  kkk5993@naver.com
                 </a>
               </li>
               <li>
@@ -74,11 +79,6 @@ function Footer() {
                   라인아트 컴퓨터 학원
                 </a>
               </li>
-              <li>
-                <a href="https://wtss.tistory.com/" title="webs" target="_blank" rel="noopener noreferrer">
-                  webstroyboy
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -86,13 +86,16 @@ function Footer() {
             <h3>Work Through</h3>
             <ul>
               <li>
-                <a href="#">html</a>
+                <a href="#">html,css,javascript</a>
               </li>
               <li>
-                <a href="#">css</a>
+                <a href="#">scss, php, mysql, mongoDB</a>
               </li>
               <li>
-                <a href="#">javascript</a>
+                <a href="#">react, vue</a>
+              </li>
+              <li>
+                <a href="#">postman, firebase, slack, notion</a>
               </li>
             </ul>
           </div>

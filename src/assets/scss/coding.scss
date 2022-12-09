@@ -266,6 +266,18 @@
                 font-family: var(--font1);
                 font-weight: 400;
                 color: var(--font-color2);
+
+                span {
+                  display: block;
+                  width: 100%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+
+                  &.sf {
+                    font-size: 12px;
+                  }
+                }
                 &.hover-underline-animation {
                   display: inline-block;
                   position: relative;

@@ -42,12 +42,13 @@ function Skill() {
 
   return (
     <article id="skill">
-      <h2>BETTER DONE RIGHT</h2>
+      <h2>WHAT I CAN DO</h2>
 
       <div className="skill__inner">
         <div className="skill__title">
-          고등학교 때, 코딩의 신세계를 맛본 저는 컴퓨터 공학과에 진학하게 됩니다. <br />
-          처음에 여러 기초 이론들을 배우고 지식을 쌓는 과정을 드디어 C를 처음 배우게 됐을 때, <br />
+          코딩에는 확실한 INPUT과 OUTPUT이 있다는게 매력인 것 같습니다. <br />
+          그래서 컴퓨터 공학과를 꿈꿨던 것 같습니다. <br />
+          C를 처음 배우게 됐을 때, <br />
           저는 콘솔에 Hello World가 찍히는 순간을 아직도 잊지 못합니다. <br />
           항상 초심을 잃지 않고 배우는 자세로 임하겠습니다.
         </div>
