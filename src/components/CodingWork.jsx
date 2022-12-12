@@ -39,6 +39,7 @@ const type = [
   'image/mock/7-5.png',
   'image/mock/7-6.png',
   'image/mock/7-7.png',
+  'image/mock/7-8.png',
 ];
 
 export const mapping = {
@@ -67,6 +68,7 @@ export const mapping = {
   'sevenFive ': 22,
   'sevenSix ': 23,
   'sevenSeven ': 24,
+  'sevenEight ': 25,
 };
 
 export const reverseMapping = {
@@ -95,9 +97,8 @@ export const reverseMapping = {
   22: 'sevenFive',
   23: 'sevenSix',
   24: 'sevenSeven',
+  25: 'sevenEight',
 };
-
-const indexMapping = {};
 
 function CodingWork() {
   const [stack, setStack] = useState('Standard');

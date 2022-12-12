@@ -243,8 +243,8 @@
             margin-right: 0;
           }
 
-          &:nth-child(7),
-          &:nth-child(8) {
+          &:nth-child(8),
+          &:nth-child(9) {
             border-bottom: 1px solid var(--font-color2);
           }
           .list__conts__detail__title {
@@ -365,7 +365,7 @@
           .list__conts__detail {
             width: 100%;
 
-            &:nth-child(7) {
+            &:nth-child(8) {
               border-bottom: 0;
             }
             .list__conts__detail__title {

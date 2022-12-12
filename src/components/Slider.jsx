@@ -70,6 +70,7 @@ function Slider({ src, index, data }) {
     ['https://github.com/kim-0617/firebaselogin', 'https://mydiary-f4e5d.web.app/login'],
     ['https://github.com/kim-0617/react-blog', 'https://github.com/kim-0617/react-blog'],
     ['https://github.com/kim-0617/sleact/tree/main/alecture', 'https://github.com/kim-0617/sleact/tree/main/alecture'],
+    ['https://github.com/kim-0617/twitterclone', 'https://twitterclone-647be.firebaseapp.com/'],
   ];
 
   const onClickSource = () => {

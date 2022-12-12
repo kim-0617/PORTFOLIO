@@ -304,6 +304,25 @@ function CodingWorkList() {
             </ul>
           </div>
           {/* 08 */}
+
+          <div className="list__conts__detail">
+            <h3 className="list__conts__detail__title">리액트 03</h3>
+            <ul className="list__conts__detail__desc">
+              <li>
+                <a target="_blank" className="" href="https://github.com/kim-0617/react_youtube">
+                  <span>리액트 웹 게임</span>
+                  <span className="sf">(class, hooks)</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" className="" href="https://github.com/kim-0617/react_music">
+                  <span>트위터 클론 코딩</span>
+                  <span className="sf">(TypeScript, HashRouter, Firebase)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* 09 */}
         </div>
       </div>
     </article>
