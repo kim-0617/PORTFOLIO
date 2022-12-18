@@ -28,6 +28,10 @@ function Slider({ src, index, data }) {
       'https://kim-0617.github.io/codingclass/site/site1-responsive/index.html',
     ],
     [
+      'https://github.com/kim-0617/bank_modern_app',
+      'https://bank-modern-app-ashy.vercel.app/',
+    ],
+    [
       'https://github.com/kim-0617/codingclass/blob/main/javascript/effect/parallaxEffect07.html',
       'https://kim-0617.github.io/codingclass/javascript/effect/parallaxEffect07.html',
     ],
@@ -71,6 +75,7 @@ function Slider({ src, index, data }) {
     ['https://github.com/kim-0617/react-blog', 'https://github.com/kim-0617/react-blog'],
     ['https://github.com/kim-0617/sleact/tree/main/alecture', 'https://github.com/kim-0617/sleact/tree/main/alecture'],
     ['https://github.com/kim-0617/twitterclone', 'https://twitterclone-647be.firebaseapp.com/'],
+    ['https://github.com/kim-0617/fitness-info', 'https://jsmfitinfo.netlify.app/'],
   ];
 
   const onClickSource = () => {
@@ -90,23 +95,23 @@ function Slider({ src, index, data }) {
       bg.style.background = '#392de44d';
       // btn1.style.background = '#392de44d';
       // btn2.style.background = '#392de44d';
-    } else if (index < 6) {
+    } else if (index < 7) {
       bg.style.background = '#6e6e6ec7';
       // btn1.style.background = '#6e6e6ec7';
       // btn2.style.background = '#6e6e6ec7';
-    } else if (index < 10) {
+    } else if (index < 11) {
       bg.style.background = '#ef7345b3';
       // btn1.style.background = '#ef7345b3';
       // btn2.style.background = '#ef7345b3';
-    } else if (index < 14) {
+    } else if (index < 15) {
       bg.style.background = '#d39d2ad1';
       // btn1.style.background = '#d39d2ad1';
       // btn2.style.background = '#d39d2ad1';
-    } else if (index < 16) {
+    } else if (index < 17) {
       bg.style.background = '#44895eb8';
       // btn1.style.background = '#44895eb8';
       // btn2.style.background = '#44895eb8';
-    } else if (index < 18) {
+    } else if (index < 19) {
       bg.style.background = '#ffa07ba1';
       // btn1.style.background = '#ffa07ba1';
       // btn2.style.background = '#ffa07ba1';

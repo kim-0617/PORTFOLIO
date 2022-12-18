@@ -20,6 +20,7 @@ const type = [
   'image/mock/1-4.png',
   'image/mock/2-1.png',
   'image/mock/2-2.png',
+  'image/mock/2-3.png',
   'image/mock/3-1.png',
   'image/mock/3-2.png',
   'image/mock/3-3.png',
@@ -40,6 +41,7 @@ const type = [
   'image/mock/7-6.png',
   'image/mock/7-7.png',
   'image/mock/7-8.png',
+  'image/mock/7-9.png',
 ];
 
 export const mapping = {
@@ -49,26 +51,28 @@ export const mapping = {
   'oneFour ': 3,
   'twoOne ': 4,
   'twoTwo ': 5,
-  'threeOne ': 6,
-  'threeTwo ': 7,
-  'threeThree ': 8,
-  'threeFour ': 9,
-  'fourOne ': 10,
-  'fourTwo ': 11,
-  'fourThree ': 12,
-  'fourFour ': 13,
-  'fiveOne ': 14,
-  'fiveTwo ': 15,
-  'sixOne ': 16,
-  'sixTwo ': 17,
-  'sevenOne ': 18,
-  'sevenTwo ': 19,
-  'sevenThree ': 20,
-  'sevenFour ': 21,
-  'sevenFive ': 22,
-  'sevenSix ': 23,
-  'sevenSeven ': 24,
-  'sevenEight ': 25,
+  'twoThree ': 6,
+  'threeOne ': 7,
+  'threeTwo ': 8,
+  'threeThree ': 9,
+  'threeFour ': 10,
+  'fourOne ': 11,
+  'fourTwo ': 12,
+  'fourThree ': 13,
+  'fourFour ': 14,
+  'fiveOne ': 15,
+  'fiveTwo ': 16,
+  'sixOne ': 17,
+  'sixTwo ': 18,
+  'sevenOne ': 19,
+  'sevenTwo ': 20,
+  'sevenThree ': 21,
+  'sevenFour ': 22,
+  'sevenFive ': 23,
+  'sevenSix ': 24,
+  'sevenSeven ': 25,
+  'sevenEight ': 26,
+  'sevenNine ': 27,
 };
 
 export const reverseMapping = {
@@ -78,26 +82,28 @@ export const reverseMapping = {
   3: 'oneFour',
   4: 'twoOne',
   5: 'twoTwo',
-  6: 'threeOne',
-  7: 'threeTwo',
-  8: 'threeThree',
-  9: 'threeFour',
-  10: 'fourOne',
-  11: 'fourTwo',
-  12: 'fourThree',
-  13: 'fourFour',
-  14: 'fiveOne',
-  15: 'fiveTwo',
-  16: 'sixOne',
-  17: 'sixTwo',
-  18: 'sevenOne',
-  19: 'sevenTwo',
-  20: 'sevenThree',
-  21: 'sevenFour',
-  22: 'sevenFive',
-  23: 'sevenSix',
-  24: 'sevenSeven',
-  25: 'sevenEight',
+  6: 'twoThree',
+  7: 'threeOne',
+  8: 'threeTwo',
+  9: 'threeThree',
+  10: 'threeFour',
+  11: 'fourOne',
+  12: 'fourTwo',
+  13: 'fourThree',
+  14: 'fourFour',
+  15: 'fiveOne',
+  16: 'fiveTwo',
+  17: 'sixOne',
+  18: 'sixTwo',
+  19: 'sevenOne',
+  20: 'sevenTwo',
+  21: 'sevenThree',
+  22: 'sevenFour',
+  23: 'sevenFive',
+  24: 'sevenSix',
+  25: 'sevenSeven',
+  26: 'sevenEight',
+  27: 'sevenNine',
 };
 
 function CodingWork() {
@@ -159,19 +165,19 @@ function CodingWork() {
     if (i < 4) {
       setStack('Standard');
       document.querySelectorAll('.menu__list li')[0].classList.add('active', 'standard');
-    } else if (i < 6) {
+    } else if (i < 7) {
       setStack('Responsive');
       document.querySelectorAll('.menu__list li')[1].classList.add('active', 'responsive');
-    } else if (i < 10) {
+    } else if (i < 11) {
       setStack('Effect');
       document.querySelectorAll('.menu__list li')[2].classList.add('active', 'effect');
-    } else if (i < 14) {
+    } else if (i < 15) {
       setStack('Game');
       document.querySelectorAll('.menu__list li')[3].classList.add('active', 'games');
-    } else if (i < 16) {
+    } else if (i < 17) {
       setStack('Php');
       document.querySelectorAll('.menu__list li')[4].classList.add('active', 'phpSite');
-    } else if (i < 18) {
+    } else if (i < 19) {
       setStack('VueSite');
       document.querySelectorAll('.menu__list li')[5].classList.add('active', 'vueSite');
     } else {

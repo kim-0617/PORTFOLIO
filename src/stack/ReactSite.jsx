@@ -60,6 +60,9 @@ function ReactSite(prop, ref) {
       <div className="sevenEight">
         <span className="ir">React 7-8</span>
       </div>
+      <div className="sevenNine">
+        <span className="ir">React 7-9</span>
+      </div>
     </div>
   );
 }

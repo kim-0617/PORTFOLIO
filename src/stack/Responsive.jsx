@@ -42,6 +42,9 @@ function Responsive(prop, ref) {
       <div className="twoTwo">
         <span className="ir">반응형 2-2</span>
       </div>
+      <div className="twoThree">
+        <span className="ir">반응형 2-2</span>
+      </div>
     </div>
   );
 }

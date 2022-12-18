@@ -31,6 +31,14 @@
   overscroll-behavior: none;
 }
 
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 // 가로모드 글씨 확대 초기화
 html {
   -webkit-text-size-adjust: 100%;

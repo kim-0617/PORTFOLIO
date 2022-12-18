@@ -105,6 +105,18 @@ function CodingWorkList() {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  target="_blank"
+                  className=""
+                  href="https://bank-modern-app-ashy.vercel.app/"
+                >
+                  <span>반응형 사이트 03</span>
+                  <span className="sf" style={{ visibility: 'hidden' }}>
+                    space
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
           {/* 03 */}
@@ -309,15 +321,21 @@ function CodingWorkList() {
             <h3 className="list__conts__detail__title">리액트 03</h3>
             <ul className="list__conts__detail__desc">
               <li>
-                <a target="_blank" className="" href="https://github.com/kim-0617/react_youtube">
+                <a target="_blank" className="" href="https://reactwebgame-314c7.web.app/">
                   <span>리액트 웹 게임</span>
                   <span className="sf">(class, hooks)</span>
                 </a>
               </li>
               <li>
-                <a target="_blank" className="" href="https://github.com/kim-0617/react_music">
+                <a target="_blank" className="" href="https://twitterclone-647be.firebaseapp.com/">
                   <span>트위터 클론 코딩</span>
                   <span className="sf">(TypeScript, HashRouter, Firebase)</span>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" className="" href="https://jsmfitinfo.netlify.app/">
+                  <span>피트니스 앱</span>
+                  <span className="sf">(반응형, rapid api)</span>
                 </a>
               </li>
             </ul>

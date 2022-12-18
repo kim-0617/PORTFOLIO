@@ -205,7 +205,8 @@
     background: var(--white);
     color: var(--font-color2);
     padding: 10vw 0;
-
+    height: 200vh;
+    
     h2 {
       font-size: 7vw;
       font-family: var(--font2);
@@ -344,6 +345,10 @@
     }
     #CodingWork {
       display: none;
+    }
+
+    #CodingWorkList {
+      height: auto;
     }
   }
 }
