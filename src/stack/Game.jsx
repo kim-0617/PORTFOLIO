@@ -25,7 +25,7 @@ function Game(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = document.querySelectorAll(".menu__conts > div");
+    const target = [...infoRef];
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/4-${index + 1}.png')`;
       t.style.borderColor = "#C2A66A";

@@ -21,7 +21,7 @@ function Responsive(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = document.querySelectorAll(".menu__conts > div");
+    const target = [...infoRef];
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/2-${index + 1}.png')`;
       t.style.borderColor = "#A2A2A2";
