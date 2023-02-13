@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { CodingIntro, CodingWork, CodingWorkList } from '../components';
+import React from "react";
+import { CodingIntro, CodingWork, CodingWorkList } from "../components";
 
 function Coding() {
-
   return (
     <section id="coding">
       <CodingIntro />
