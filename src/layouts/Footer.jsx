@@ -1,21 +1,13 @@
-import React from 'react';
+import React from "react";
 
 function Footer() {
-  // 스킵 메뉴
-  document.querySelectorAll('#skip a').forEach((a) => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-      });
-    });
-  });
+  const contents = ["header", "about", "coding", "Contact Me"];
 
   const onClickFooter = (e) => {
-    if (e.target.tagName === 'A' && !e.target.classList.contains('not')) {
+    if (e.target.tagName === "A" && !e.target.classList.contains("not")) {
       e.preventDefault();
-      document.querySelector(e.target.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
+      document.querySelector(e.target.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
       });
     }
   };
@@ -33,20 +25,17 @@ function Footer() {
         <div className="navigation">
           <h3>Navigation</h3>
           <ul onClick={onClickFooter}>
-            <li>
-              <a href="header">Home</a>
-            </li>
-            <li>
-              <a href="#about">About Me</a>
-            </li>
-            <li>
-              <a href="#coding">My Working</a>
-            </li>
-            <li>
-              <a className="not" href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
-                Contact Us
-              </a>
-            </li>
+            {contents.map((content) => (
+              <li key={content}>
+                {content === "Contact Me" ? (
+                  <a className="not" href="mailto:kimsh5993@gmail.com" title="Email" rel="noopener noreferrer">
+                    Contact Us
+                  </a>
+                ) : (
+                  <a href={`#${content}`}>{content}</a>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
