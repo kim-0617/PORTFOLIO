@@ -1,27 +1,26 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-// import { Bubble } from '../others';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 function CodingIntro() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     function bubbles() {
-      $.each($('.particletext.bubbles'), function () {
+      $.each($(".particletext.bubbles"), function () {
         var bubblecount = ($(this).width() / 50) * 1.2;
         for (var i = 0; i <= bubblecount; i++) {
           var size = $.rnd(30, 50) / 10;
           $(this).append(
             '<span class="particle" style="top:' +
               $.rnd(20, 80) +
-              '%; left:' +
+              "%; left:" +
               $.rnd(0, 95) +
-              '%;width:' +
+              "%;width:" +
               size +
-              'px; height:' +
+              "px; height:" +
               size +
-              'px;animation-delay: ' +
+              "px;animation-delay: " +
               $.rnd(0, 30) / 10 +
               's;"></span>',
           );
@@ -37,59 +36,59 @@ function CodingIntro() {
     bubbles();
 
     const tl = gsap.timeline();
-    gsap.set('.work1', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".work1", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
-    gsap.set('.work2', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".work2", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
-    gsap.set('.work3', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".work3", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
-    gsap.set('.coding1', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".coding1", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
-    gsap.set('.coding2', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".coding2", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
-    gsap.set('.coding3', {
-      webkitTextFillColor: 'transparent',
-      webkitTextStroke: '2px #fff',
+    gsap.set(".coding3", {
+      webkitTextFillColor: "transparent",
+      webkitTextStroke: "2px #fff",
     });
 
-    tl.to('.work1', {
+    tl.to(".work1", {
       duration: 1,
-      webkitTextFillColor: '#fff',
-      ease: 'power3.in',
+      webkitTextFillColor: "#fff",
+      ease: "power3.in",
       scrollTrigger: {
-        trigger: '.work1',
+        trigger: ".work1",
         scrub: 1,
-        end: '-=500',
+        end: "-=500",
       },
     });
-    tl.to('.coding2', {
+    tl.to(".coding2", {
       duration: 1,
-      webkitTextFillColor: '#fff',
-      ease: 'power3.in',
+      webkitTextFillColor: "#fff",
+      ease: "power3.in",
       scrollTrigger: {
-        trigger: '.coding2',
+        trigger: ".coding2",
         scrub: 1,
-        end: '+=500',
+        end: "+=500",
       },
     });
-    tl.to('.work3', {
+    tl.to(".work3", {
       duration: 1,
-      webkitTextFillColor: '#fff',
-      ease: 'power3.in',
+      webkitTextFillColor: "#fff",
+      ease: "power3.in",
       scrollTrigger: {
-        trigger: '.work3',
+        trigger: ".work3",
         scrub: 1,
-        end: '+=500',
+        end: "+=500",
       },
     });
   }, []);
@@ -111,9 +110,6 @@ function CodingIntro() {
             <span className="line particletext bubbles coding3">coding</span>
           </div>
         </div>
-        {/* <div className="bubble">
-          <span className="ir">비눗방울</span>
-        </div> */}
       </article>
     </>
   );
