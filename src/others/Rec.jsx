@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from "react";
 
-function Rec() {
+function Rec(prop, ref) {
   class Rec {
     constructor(radius, color) {
       if (radius === undefined) {
         radius = 40;
       }
       if (color === undefined) {
-        color = '#ff0000';
+        color = "#ff0000";
       }
       this.x = 0;
       this.y = 0;
@@ -36,7 +36,7 @@ function Rec() {
       // set the fill style
       // context.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
       // context.fillRect(-25, -25, 50, 50);
-      context.strokeStyle = '#FF936B';
+      context.strokeStyle = "#FF936B";
       context.lineWidth = this.lineWidth;
       context.strokeRect(0, 0, this.radius, this.radius);
       context.restore();
@@ -76,8 +76,8 @@ function Rec() {
   }
 
   useEffect(() => {
-    var canvas = document.getElementById('Rcanvas'),
-      context = canvas.getContext('2d'),
+    var canvas = document.getElementById("Rcanvas"),
+      context = canvas.getContext("2d"),
       recs = [],
       numrecs = window.innerWidth > 900 ? 35 : 15,
       bounce = -0.9,
@@ -88,7 +88,7 @@ function Rec() {
 
     for (var radius, rec, i = 0; i < numrecs; i++) {
       radius = Math.random() * 20 + 25;
-      rec = new Rec(radius, 'transparent');
+      rec = new Rec(radius, "transparent");
       rec.mass = radius;
       rec.x = Math.random() * canvas.width;
       rec.y = Math.random() * canvas.height;
@@ -195,9 +195,9 @@ function Rec() {
 
   return (
     <>
-      <canvas width="1920px" height="1200px" id="Rcanvas"></canvas>
+      <canvas width="1920px" height="1200px" id="Rcanvas" ref={ref}></canvas>
     </>
   );
 }
 
-export default Rec;
+export default forwardRef(Rec);
