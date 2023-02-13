@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React from "react";
 
 function Dummy() {
   return <section id="dummy"></section>;
