@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { Ball, BallDown } from '../others';
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { Ball, BallDown } from "../others";
 
 function Intro({ isLoading }) {
   const [isDown, setIsDown] = useState(true);
@@ -18,24 +18,6 @@ function Intro({ isLoading }) {
 
   const sectionRef = useRef(null);
 
-  const imgMove = (e) => {
-    // 마우스 좌표 값
-    let mousePageX = e.pageX;
-    let mousePageY = e.pageY;
-
-    // 마우스 좌표 값 가운데로 초기화
-    // 전체길이 / 2 - 마우스 좌표 값 === 0
-    let centerPageX = window.innerWidth / 2 - mousePageX;
-    let centerPageY = window.innerHeight / 2 - mousePageY;
-
-    gsap.to(thirdTargetChild.current, {
-      duration: 0.5,
-      x: centerPageX * 0.09,
-      y: centerPageY * 0.09,
-      ease: 'power1.out',
-    });
-  };
-
   useEffect(() => {
     if (isLoading) {
       setIsDown(false);
@@ -47,15 +29,15 @@ function Intro({ isLoading }) {
   useEffect(() => {
     if (isDone) return;
     /** 텍스트 쪽 애니메이션 */
-    const canvas = document.querySelector('#canvas');
+    const canvas = document.querySelector("#canvas");
     // .to(titleRef.current, { duration: 1.5, text: 'PORT <br> FOLIO', ease: 'steps(12)' })
 
     gsap.set(canvas, { opacity: 0 });
     gsap.set(firstRef.current, { opacity: 0, y: window.innerWidth > 900 ? -50 : -15 });
     gsap.set(lastRef.current, { opacity: 0, y: window.innerWidth > 900 ? 50 : 15 });
-    gsap.set(firstTarget.current, { y: window.innerWidth > 900 ? '10%' : '10%', opacity: 0 }); // 주머니
-    gsap.set(secondTarget.current, { y: window.innerWidth > 900 ? '-5%' : '-15%', opacity: 0 }); // 물감통
-    gsap.set(thirdTarget.current, { top: window.innerWidth > 900 ? '50vw' : '200vw', opacity: 0, rotate: 0 }); // 핸드폰
+    gsap.set(firstTarget.current, { y: window.innerWidth > 900 ? "10%" : "10%", opacity: 0 }); // 주머니
+    gsap.set(secondTarget.current, { y: window.innerWidth > 900 ? "-5%" : "-15%", opacity: 0 }); // 물감통
+    gsap.set(thirdTarget.current, { top: window.innerWidth > 900 ? "50vw" : "200vw", opacity: 0, rotate: 0 }); // 핸드폰
 
     if (isLoading) return;
     setTimeout(() => {
@@ -64,7 +46,7 @@ function Intro({ isLoading }) {
 
     setTimeout(() => {
       setIsDown(false);
-      tl.to(canvas, 1.5, { opacity: 1, ease: 'power2.in' });
+      tl.to(canvas, 1.5, { opacity: 1, ease: "power2.in" });
     }, 2500);
 
     setTimeout(() => {
@@ -72,18 +54,18 @@ function Intro({ isLoading }) {
         duration: 0.7,
         opacity: 1,
         y: 0,
-        ease: 'power3.out',
+        ease: "power3.out",
       })
         .to([firstTarget.current, secondTarget.current], 0.7, {
-          y: 'auto',
+          y: "auto",
           opacity: 1,
-          ease: 'slow(0.7, 0.7, false)',
+          ease: "slow(0.7, 0.7, false)",
         })
         .to(thirdTarget.current, 1.2, {
-          top: 'auto',
+          top: "auto",
           rotate: 0,
           opacity: 1,
-          ease: 'power3.in',
+          ease: "power3.in",
         });
     }, 1900);
   }, [isLoading]);
@@ -92,7 +74,7 @@ function Intro({ isLoading }) {
     if (!isDone) return;
 
     /** 이미지 움직이기*/
-    const images = [...document.querySelectorAll('.mouse__target')];
+    const images = [titleRef.current, thirdTarget.current, secondTarget.current, firstTarget.current];
 
     const lerp = (a, b, n) => (1 - n) * a + n * b;
     const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
@@ -108,12 +90,16 @@ function Intro({ isLoading }) {
     };
 
     let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    window.addEventListener('mousemove', (e) => (mousePos = getMousePosition(e)));
+
+    const onMouseMove = (e) => {
+      mousePos = getMousePosition(e);
+    };
+    window.addEventListener("mousemove", onMouseMove);
 
     gsap.fromTo(
-      '.mouse__target',
+      ".mouse__target",
       {
-        ease: 'power3.inOut',
+        ease: "power3.inOut",
       },
       {
         stagger: 0.1,
