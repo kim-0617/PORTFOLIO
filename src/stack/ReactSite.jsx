@@ -45,7 +45,7 @@ function ReactSite(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef];
+    const target = [...infoRef.current];
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/7-${index + 1}.png')`;
       t.style.borderColor = "#879AAA";

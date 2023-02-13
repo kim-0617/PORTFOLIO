@@ -17,7 +17,7 @@ function Php(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef];
+    const target = [...infoRef.current];
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/5-${index + 1}.png')`;
       t.style.borderColor = "#8DAA98";
