@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Ball, BallDown } from "../others";
 
-function Intro({ isLoading }) {
+function Intro({ isLoading }, ref) {
   const [isDown, setIsDown] = useState(true);
   const [isDone, setIsDone] = useState(false);
   const tl = gsap.timeline();
@@ -15,8 +15,6 @@ function Intro({ isLoading }) {
   const secondTarget = useRef(null);
   const thirdTarget = useRef(null);
   const thirdTargetChild = useRef(null);
-
-  const sectionRef = useRef(null);
 
   useEffect(() => {
     if (isLoading) {
@@ -126,7 +124,7 @@ function Intro({ isLoading }) {
 
   return (
     <>
-      <section id="intro" ref={sectionRef}>
+      <section id="intro" ref={ref}>
         {isDown ? <BallDown /> : null}
         <Ball />
         <div className="intro__inner">
@@ -149,4 +147,4 @@ function Intro({ isLoading }) {
   );
 }
 
-export default Intro;
+export default forwardRef(Intro);

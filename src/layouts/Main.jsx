@@ -1,9 +1,10 @@
-import { Intro, About, Coding, Dummy } from '../sections';
-import React, { useState } from 'react';
-import { ImgLoader } from '../others';
+import { Intro, About, Coding, Dummy } from "../sections";
+import React, { useRef, useState } from "react";
+import { ImgLoader } from "../others";
 
 function Main() {
   const [isLoading, setIsLoading] = useState(false);
+  const introRef = useRef(null);
 
   return (
     <main id="main">
@@ -14,8 +15,8 @@ function Main() {
         </>
       ) : (
         <>
-          <Intro isLoading={isLoading} />
-          <About />
+          <Intro isLoading={isLoading} ref={introRef} />
+          <About ref={introRef} />
           <Dummy />
           <Coding />
         </>

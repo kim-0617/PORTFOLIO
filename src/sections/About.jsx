@@ -1,14 +1,14 @@
-import { AboutIntro, Focus, Skill } from '../components';
-import { useRef, useState, useEffect } from 'react';
+import { AboutIntro, Focus, Skill } from "../components";
+import { useRef, useState, useEffect, forwardRef } from "react";
 
-function About() {
+function About(prop, ref) {
   const aboutRef = useRef(null);
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -18,9 +18,9 @@ function About() {
     }
 
     if (window.scrollY >= window.innerHeight * 2.5) {
-      document.querySelector('#intro').style.background = '#f64c0e';
+      ref.current.style.background = "#f64c0e";
     } else {
-      document.querySelector('#intro').style.background = '#0000e9';
+      ref.current.style.background = "#0000e9";
     }
   };
 
@@ -33,4 +33,4 @@ function About() {
   );
 }
 
-export default About;
+export default forwardRef(About);
