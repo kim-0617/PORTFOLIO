@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,23 +8,15 @@ function Skill() {
   useEffect(() => {
     let tl = gsap.timeline({
       defaults: {
-        ease: 'power1.in',
+        ease: "power1.in",
         duration: 1,
       },
     });
 
-    // gsap.set('#skill h2', {
-    //   opacity: 0,
-    //   y: 300,
-    //   ease: 'power4.out',
-    //   delay: 1,
-    //   skewY: 7,
-    // });
-
-    tl.from('#skill h2', 1.8, {
+    tl.from("#skill h2", 1.8, {
       y: 100,
       opacity: 0,
-      ease: 'power4.out',
+      ease: "power4.out",
       delay: 1,
       skewY: 4,
       stagger: {
@@ -33,8 +25,8 @@ function Skill() {
     });
     ScrollTrigger.create({
       animation: tl,
-      trigger: '#skill',
-      end: '-=100',
+      trigger: "#skill",
+      end: "-=100",
       scrub: 1,
       // pin: true,
     });
