@@ -1,47 +1,48 @@
-import React, { forwardRef, useEffect, useContext } from 'react';
-import { mapping, reverseMapping } from '../components/CodingWork';
-import { ChangeContext } from '../context/ChangeContext';
+import React, { forwardRef, useEffect, useContext, useRef } from "react";
+import { ChangeContext } from "../context/ChangeContext";
+import { bdrs, onClickSite } from "../hooks/useStack";
 
 function VueSite(prop, ref) {
+  const info = [
+    { cn: "sixOne", name: "VUE 6-1" },
+    { cn: "sixTwo", name: "VUE 6-2" },
+  ];
+
+  const infoRef = useRef([]);
+
   useEffect(() => {
-    const target = document.querySelectorAll('.menu__conts > div');
+    const target = [...infoRef.current];
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/6-${index + 1}.png')`;
-      t.style.borderColor = '#C99B87';
-      t.style.backgroundColor = '#FABDA3';
+      t.style.borderColor = "#C99B87";
+      t.style.backgroundColor = "#FABDA3";
     });
   }, []);
 
   const { index } = useContext(ChangeContext);
 
   useEffect(() => {
-    document.querySelectorAll('.bdrs').forEach((r) => {
-      r.classList.remove('bdrs');
-    });
-
-    document.querySelector(`.${reverseMapping[index]}`)?.classList.add('bdrs');
+    bdrs(infoRef, index);
   }, [index]);
 
-  const onClickSite = (e) => {
-    if (e.target.className !== 'menu__conts') {
-      document.querySelectorAll('.bdrs').forEach((r) => {
-        r.classList.remove('bdrs');
-      });
-
-      e.target.classList.add('bdrs');
-      const name = e.target.className.replace('bdrs', '');
-      ref.current.swiper.slideTo(mapping[name]);
-    }
-  };
-
   return (
-    <div className="menu__conts" onClick={onClickSite}>
-      <div className="sixOne">
-        <span className="ir">VUE 6-1</span>
-      </div>
-      <div className="sixTwo">
-        <span className="ir">VUE 6-2</span>
-      </div>
+    <div
+      className="menu__conts"
+      onClick={(e) => {
+        onClickSite(e, infoRef, ref);
+      }}
+    >
+      {info.map((item, infoIndex) => (
+        <div
+          className={item.cn}
+          key={item.cn}
+          ref={(element) => {
+            infoRef.current[infoIndex] = element;
+          }}
+        >
+          <span className="ir">{item.name}</span>
+        </div>
+      ))}
     </div>
   );
 }

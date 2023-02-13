@@ -1,68 +1,80 @@
-import React, { forwardRef, useEffect, useContext } from 'react';
-import { mapping, reverseMapping } from '../components/CodingWork';
-import { ChangeContext } from '../context/ChangeContext';
+import React, { forwardRef, useEffect, useContext, useRef } from "react";
+import { ChangeContext } from "../context/ChangeContext";
+import { bdrs, onClickSite } from "../hooks/useStack";
 
 function ReactSite(prop, ref) {
+  const { index } = useContext(ChangeContext);
+  const info = [
+    {
+      cn: "sevenOne",
+      name: "React 7-1",
+    },
+    {
+      cn: "sevenTwo",
+      name: "React 7-2",
+    },
+    {
+      cn: "sevenThree",
+      name: "React 7-3",
+    },
+    {
+      cn: "sevenFour",
+      name: "React 7-4",
+    },
+    {
+      cn: "sevenFive",
+      name: "React 7-5",
+    },
+    {
+      cn: "sevenSix",
+      name: "React 7-6",
+    },
+    {
+      cn: "sevenSeven",
+      name: "React 7-7",
+    },
+    {
+      cn: "sevenEight",
+      name: "React 7-8",
+    },
+    {
+      cn: "sevenNine",
+      name: "React 7-9",
+    },
+  ];
+  const infoRef = useRef([]);
+
   useEffect(() => {
-    const target = document.querySelectorAll('.menu__conts > div');
+    const target = document.querySelectorAll(".menu__conts > div");
     target.forEach((t, index) => {
       t.style.backgroundImage = `url('image/icon/7-${index + 1}.png')`;
-      t.style.borderColor = '#879AAA';
-      t.style.backgroundColor = '#B1C6DF';
+      t.style.borderColor = "#879AAA";
+      t.style.backgroundColor = "#B1C6DF";
     });
   }, []);
 
-  const onClickSite = (e) => {
-    if (e.target.className !== 'menu__conts') {
-      document.querySelectorAll('.bdrs').forEach((r) => {
-        r.classList.remove('bdrs');
-      });
-
-      e.target.classList.add('bdrs');
-      const name = e.target.className.replace('bdrs', '');
-      ref.current.swiper.slideTo(mapping[name]);
-    }
-  };
-
-  const { index } = useContext(ChangeContext);
-
   useEffect(() => {
-    document.querySelectorAll('.bdrs').forEach((r) => {
-      r.classList.remove('bdrs');
-    });
-
-    document.querySelector(`.${reverseMapping[index]}`)?.classList.add('bdrs');
+    bdrs(infoRef, index);
   }, [index]);
 
   return (
-    <div className="menu__conts" onClick={onClickSite}>
-      <div className="sevenOne">
-        <span className="ir">React 7-1</span>
-      </div>
-      <div className="sevenTwo">
-        <span className="ir">React 7-2</span>
-      </div>
-      <div className="sevenThree">
-        <span className="ir">React 7-3</span>
-      </div>
-      <div className="sevenFour">
-        <span className="ir">React 7-4</span>
-      </div>
-      <div className="sevenFive">
-        <span className="ir">React 7-5</span>
-      </div>
-      <div className="sevenSix">
-        <span className="ir">React 7-6</span>
-      </div>
-      <div className="sevenSeven">
-        <span className="ir">React 7-7</span>
-      </div>
-      <div className="sevenEight">
-        <span className="ir">React 7-8</span>
-      </div>
-      <div className="sevenNine">
-        <span className="ir">React 7-9</span>
-      </div>
+    <div
+      className="menu__conts"
+      onClick={(e) => {
+        onClickSite(e, infoRef, ref);
+      }}
+    >
+      {info.map((item, infoIndex) => (
+        <div
+          key={item.cn}
+          className={item.cn}
+          ref={(element) => {
+            infoRef.current[infoIndex] = element;
+          }}
+        >
+          <span className="ir">{item.name}</span>
+        </div>
+      ))}
     </div>
   );
 }
