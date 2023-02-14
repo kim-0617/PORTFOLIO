@@ -116,57 +116,84 @@ const menu = [
   { kr: "리액트 사이트", en: "reactSite" },
 ];
 
+const activeMapping = [
+  "standard active",
+  "responsive active",
+  "effect active",
+  "games active",
+  "phpSite active",
+  "vueSite active",
+  "reactSite active",
+];
+
 function CodingWork() {
   const [stack, setStack] = useState("Standard");
   const [index, setIndex] = useState(0);
+  const [currentTabIndex, setCurrentTabIndex] = useState(0);
 
   const swiperRef = useRef(null);
   const menuRef = useRef([]);
 
+  useEffect(() => {
+    switch (stack) {
+      case "Standard":
+        setCurrentTabIndex(0);
+        break;
+      case "Responsive":
+        setCurrentTabIndex(1);
+        break;
+      case "Effect":
+        setCurrentTabIndex(2);
+        break;
+      case "Game":
+        setCurrentTabIndex(3);
+        break;
+      case "Php":
+        setCurrentTabIndex(4);
+        break;
+      case "VueSite":
+        setCurrentTabIndex(5);
+        break;
+      case "ReactSite":
+        setCurrentTabIndex(6);
+        break;
+      default:
+        setCurrentTabIndex(1);
+        break;
+    }
+  }, [stack]);
+
   const onClickMenu = (e) => {
-    if (e.target.tagName === "A") {
-      e.preventDefault();
+    e.preventDefault();
+    if (parseInt(e.target.className.replace("menuItem", "")) === currentTabIndex || e.target.tagName !== "A") return;
 
-      [...menuRef.current].forEach((li) => {
-        li.className = "";
-      });
+    setCurrentTabIndex(parseInt(e.target.className.replace("menuItem", "")));
 
-      const parent = [...menuRef.current][parseInt(e.target.className.replace("menuItem", ""))];
-      parent.classList.add("active");
-
-      switch (e.target.innerText) {
-        case "웹표준 코딩":
-          setStack("Standard");
-          parent.classList.add("standard");
-          break;
-        case "반응형 사이트":
-          setStack("Responsive");
-          parent.classList.add("responsive");
-          break;
-        case "이펙트":
-          setStack("Effect");
-          parent.classList.add("effect");
-          break;
-        case "게임":
-          setStack("Game");
-          parent.classList.add("games");
-          break;
-        case "PHP":
-          setStack("Php");
-          parent.classList.add("phpSite");
-          break;
-        case "뷰 사이트":
-          setStack("VueSite");
-          parent.classList.add("vueSite");
-          break;
-        case "리액트 사이트":
-          setStack("ReactSite");
-          parent.classList.add("reactSite");
-          break;
-        default:
-          setStack("Standard");
-          break;
-      }
+    switch (e.target.innerText) {
+      case "웹표준 코딩":
+        setStack("Standard");
+        break;
+      case "반응형 사이트":
+        setStack("Responsive");
+        break;
+      case "이펙트":
+        setStack("Effect");
+        break;
+      case "게임":
+        setStack("Game");
+        break;
+      case "PHP":
+        setStack("Php");
+        break;
+      case "뷰 사이트":
+        setStack("VueSite");
+        break;
+      case "리액트 사이트":
+        setStack("ReactSite");
+        break;
+      default:
+        setStack("Standard");
+        break;
     }
   };
 
@@ -174,33 +201,20 @@ function CodingWork() {
     let i = this.realIndex;
     setIndex(i);
 
-    const menus = [...menuRef.current];
-
-    menus.forEach((li) => {
-      li.className = "";
-    });
-
     if (i < 4) {
       setStack("Standard");
-      menus[0].classList.add("active", "standard");
     } else if (i < 7) {
       setStack("Responsive");
-      menus[1].classList.add("active", "responsive");
     } else if (i < 11) {
       setStack("Effect");
-      menus[2].classList.add("active", "effect");
     } else if (i < 15) {
       setStack("Game");
-      menus[3].classList.add("active", "games");
     } else if (i < 17) {
       setStack("Php");
-      menus[4].classList.add("active", "phpSite");
     } else if (i < 19) {
       setStack("VueSite");
-      menus[5].classList.add("active", "vueSite");
     } else {
       setStack("ReactSite");
-      menus[6].classList.add("active", "reactSite");
     }
   };
 
@@ -243,7 +257,7 @@ function CodingWork() {
                     menuRef.current[menuIndex] = element;
                   }}
                   key={m.en}
-                  className={`${menuIndex === 0 ? "active standard" : ""} `}
+                  className={`${currentTabIndex === menuIndex ? activeMapping[currentTabIndex] : ""}`}
                 >
                   <a href="#" className={`menuItem${menuIndex}`}>
                     {m.kr}
