@@ -4,18 +4,22 @@ export const bdrs = (infoRef, index) => {
   [...infoRef.current].forEach((r) => {
     r.classList.remove("bdrs");
   });
-
+  console.log(index);
   document.querySelector(`.${reverseMapping[index]}`)?.classList.add("bdrs");
 };
 
-export const onClickSite = (e, infoRef, ref) => {
-  if (e.target.className !== "menu__conts") {
-    [...infoRef.current].forEach((r) => {
-      r.classList.remove("bdrs");
-    });
+export const onClickSite = (e, ref, border, setBorder) => {
+  e.stopPropagation();
 
-    e.target.classList.add("bdrs");
-    const name = e.target.className.replace("bdrs", "");
+  const target = e.target.className
+    .split(" ")
+    .filter((x) => x == parseInt(x))
+    .map((y) => parseInt(y))[0];
+
+  setBorder(target);
+
+  if (border != target) {
+    const name = e.target.className.replace("bdrs", "").replace(target, "");
     ref.current.swiper.slideTo(mapping[name]);
   }
 };

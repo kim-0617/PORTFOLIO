@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useContext, useRef } from "react";
+import React, { forwardRef, useEffect, useContext, useRef, useState } from "react";
 import { ChangeContext } from "../context/ChangeContext";
 import { bdrs, onClickSite } from "../hooks/useStack";
 
@@ -24,22 +24,18 @@ function standard(prop, ref) {
 
   const { index } = useContext(ChangeContext);
   const infoRef = useRef([]);
+  const [border, setBorder] = useState(0);
 
   useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
   return (
-    <div
-      className="menu__conts"
-      onClick={(e) => {
-        onClickSite(e, infoRef, ref);
-      }}
-    >
+    <div className="menu__conts">
       {info.map((item, infoIndex) => (
         <div
           key={item.cn}
-          className={`${item.cn} ${index === infoIndex ? "bdrs" : ""}`}
+          className={`${item.cn} ${border === infoIndex ? "bdrs" : ""} ${infoIndex}`}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
           }}
@@ -47,6 +43,9 @@ function standard(prop, ref) {
             backgroundImage: `url('image/icon/1-${infoIndex + 1}.png')`,
             borderColor: "#737199",
             backgroundColor: "#A7A3D0",
+          }}
+          onClick={(e) => {
+            onClickSite(e, ref, border, setBorder);
           }}
         >
           <span className="ir">{item.name}</span>

@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useContext, useRef } from "react";
+import React, { forwardRef, useEffect, useContext, useRef, useState } from "react";
 import { ChangeContext } from "../context/ChangeContext";
 import { bdrs, onClickSite } from "../hooks/useStack";
 
@@ -22,23 +22,20 @@ function Effect(prop, ref) {
       name: "이펙트 3-4",
     },
   ];
+
   const infoRef = useRef([]);
+  const [border, setBorder] = useState(0);
 
   useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
   return (
-    <div
-      className="menu__conts"
-      onClick={(e) => {
-        onClickSite(e, infoRef, ref);
-      }}
-    >
+    <div className="menu__conts">
       {info.map((item, infoIndex) => (
         <div
           key={item.cn}
-          className={item.cn}
+          className={`${item.cn} ${border === infoIndex ? "bdrs" : ""} ${infoIndex}`}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
           }}
@@ -46,6 +43,9 @@ function Effect(prop, ref) {
             backgroundImage: `url('image/icon/4-${infoIndex + 1}.png')`,
             borderColor: "#B89186",
             backgroundColor: "#F9D1C2",
+          }}
+          onClick={(e) => {
+            onClickSite(e, ref, border, setBorder);
           }}
         >
           <span className="ir">{item.name}</span>
