@@ -51,6 +51,11 @@ function Game(prop, ref) {
           ref={(element) => {
             infoRef.current[infoIndex] = element;
           }}
+          style={{
+            backgroundImage: `url('image/icon/4-${infoIndex + 1}.png')`,
+            borderColor: "#C2A66A",
+            backgroundColor: "#EECE87",
+          }}
         >
           <span className="ir">{item.name}</span>
         </div>

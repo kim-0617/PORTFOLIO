@@ -7,19 +7,9 @@ function VueSite(prop, ref) {
     { cn: "sixOne", name: "VUE 6-1" },
     { cn: "sixTwo", name: "VUE 6-2" },
   ];
+  const { index } = useContext(ChangeContext);
 
   const infoRef = useRef([]);
-
-  useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/6-${index + 1}.png')`;
-      t.style.borderColor = "#C99B87";
-      t.style.backgroundColor = "#FABDA3";
-    });
-  }, []);
-
-  const { index } = useContext(ChangeContext);
 
   useEffect(() => {
     bdrs(infoRef, index);
@@ -38,6 +28,11 @@ function VueSite(prop, ref) {
           key={item.cn}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/6-${infoIndex + 1}.png')`,
+            borderColor: "#C99B87",
+            backgroundColor: "#FABDA3",
           }}
         >
           <span className="ir">{item.name}</span>

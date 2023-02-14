@@ -21,15 +21,6 @@ function Responsive(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/2-${index + 1}.png')`;
-      t.style.borderColor = "#A2A2A2";
-      t.style.backgroundColor = "#DEDEDE";
-    });
-  }, []);
-
-  useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
@@ -46,6 +37,11 @@ function Responsive(prop, ref) {
           className={item.cn}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/2-${infoIndex + 1}.png')`,
+            borderColor: "#A2A2A2",
+            backgroundColor: "#DEDEDE",
           }}
         >
           <span className="ir">{item.name}</span>

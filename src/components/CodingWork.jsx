@@ -243,7 +243,7 @@ function CodingWork() {
                     menuRef.current[menuIndex] = element;
                   }}
                   key={m.en}
-                  className={`${menuIndex === 0 ? "active standard" : ""}`}
+                  className={`${menuIndex === 0 ? "active standard" : ""} `}
                 >
                   <a href="#" className={`menuItem${menuIndex}`}>
                     {m.kr}

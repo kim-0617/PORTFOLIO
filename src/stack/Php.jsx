@@ -17,15 +17,6 @@ function Php(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/5-${index + 1}.png')`;
-      t.style.borderColor = "#8DAA98";
-      t.style.backgroundColor = "#B9CFC1";
-    });
-  }, []);
-
-  useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
@@ -42,6 +33,11 @@ function Php(prop, ref) {
           className={item.cn}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/5-${infoIndex + 1}.png')`,
+            borderColor: "#8DAA98",
+            backgroundColor: "#B9CFC1",
           }}
         >
           <span className="ir">{item.name}</span>

@@ -25,15 +25,6 @@ function Effect(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/3-${index + 1}.png')`;
-      t.style.borderColor = "#B89186";
-      t.style.backgroundColor = "#F9D1C2";
-    });
-  }, []);
-
-  useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
@@ -50,6 +41,11 @@ function Effect(prop, ref) {
           className={item.cn}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/4-${infoIndex + 1}.png')`,
+            borderColor: "#B89186",
+            backgroundColor: "#F9D1C2",
           }}
         >
           <span className="ir">{item.name}</span>

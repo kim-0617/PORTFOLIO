@@ -26,15 +26,6 @@ function standard(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/1-${index + 1}.png')`;
-      t.style.borderColor = "#737199";
-      t.style.backgroundColor = "#A7A3D0";
-    });
-  }, []);
-
-  useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
@@ -51,6 +42,11 @@ function standard(prop, ref) {
           className={`${item.cn} ${index === infoIndex ? "bdrs" : ""}`}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/1-${infoIndex + 1}.png')`,
+            borderColor: "#737199",
+            backgroundColor: "#A7A3D0",
           }}
         >
           <span className="ir">{item.name}</span>

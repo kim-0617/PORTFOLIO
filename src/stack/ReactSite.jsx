@@ -45,15 +45,6 @@ function ReactSite(prop, ref) {
   const infoRef = useRef([]);
 
   useEffect(() => {
-    const target = [...infoRef.current];
-    target.forEach((t, index) => {
-      t.style.backgroundImage = `url('image/icon/7-${index + 1}.png')`;
-      t.style.borderColor = "#879AAA";
-      t.style.backgroundColor = "#B1C6DF";
-    });
-  }, []);
-
-  useEffect(() => {
     bdrs(infoRef, index);
   }, [index]);
 
@@ -70,6 +61,11 @@ function ReactSite(prop, ref) {
           className={item.cn}
           ref={(element) => {
             infoRef.current[infoIndex] = element;
+          }}
+          style={{
+            backgroundImage: `url('image/icon/7-${infoIndex + 1}.png')`,
+            borderColor: "#879AAA",
+            backgroundColor: "#B1C6DF",
           }}
         >
           <span className="ir">{item.name}</span>
