@@ -13,8 +13,6 @@ function AboutIntro({ scroll }) {
 
   const tl = gsap.timeline();
   useEffect(() => {
-    // const canvas = document.querySelector('#Rcanvas');
-
     gsap.set(canvasRef.current, { opacity: 0 });
     gsap.set(titleRef.current, { opacity: 0, y: 50 });
     gsap.set(firstTarget.current, { top: "45%", opacity: 0 }); // 계산기
