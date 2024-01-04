@@ -27,7 +27,7 @@ function About(prop, ref) {
   return (
     <section id="about" ref={aboutRef}>
       <AboutIntro scroll={scroll} />
-      <Focus />
+      {/* <Focus /> */}
       <Skill />
     </section>
   );

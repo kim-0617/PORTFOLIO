@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,16 +8,16 @@ function Focus() {
   useEffect(() => {
     let tl = gsap.timeline({
       defaults: {
-        ease: 'power1.in',
+        ease: "power1.in",
         duration: 1,
       },
     });
-    tl.fromTo('.mask', { xPercent: 0 }, { xPercent: 400, stagger: 0.1 });
+    tl.fromTo(".mask", { xPercent: 0 }, { xPercent: 400, stagger: 0.1 });
 
     ScrollTrigger.create({
       animation: tl,
-      trigger: '#focus h2',
-      end: '+=80%',
+      trigger: "#focus h2",
+      end: "+=80%",
       scrub: 1,
       // pin: true,
     });
@@ -35,7 +35,7 @@ function Focus() {
         <img src="image/focus.png" alt="포커스페이지 사진입니다." />
         <div className="focus__conts">
           <div className="focus__conts__detail">
-            <h3>빨리 바뀌는 개발 트렌드에 적응하다! </h3>
+            <h3>빨리 바뀌는 개발 트렌드에 적응하다!</h3>
             <p>
               어릴적부터 학문에 관심이 많았습니다. 그래서 진득하게 무언가의 사용법과 작동원리를 파악하는데 익숙합니다.
             </p>
