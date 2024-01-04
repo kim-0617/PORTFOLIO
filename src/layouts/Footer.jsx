@@ -63,11 +63,6 @@ function Footer() {
                   010-3351-0617
                 </a>
               </li>
-              <li>
-                <a href="http://linecomputerart.com/" title="github" target="_blank" rel="noopener noreferrer">
-                  라인아트 컴퓨터 학원
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -78,10 +73,10 @@ function Footer() {
                 <a href="#">html,css,javascript</a>
               </li>
               <li>
-                <a href="#">scss, php, mysql, mongoDB</a>
+                <a href="#">scss, flutter, webview app</a>
               </li>
               <li>
-                <a href="#">react, vue</a>
+                <a href="#">react, nextjs</a>
               </li>
               <li>
                 <a href="#">postman, firebase, slack, notion</a>
@@ -96,25 +91,6 @@ function Footer() {
           </a>
           <a href="https://kim0617.tistory.com/" title="blog" target="_blank" rel="noopener noreferrer">
             <span className="ir">블로그 아이콘</span>
-          </a>
-          <a
-            href="https://www.figma.com/file/pm3ghQhBqbBolleXCZYmYa/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0?node-id=0%3A1&t=qAsXDMWl7ieQ9lnl-1"
-            title="figma"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="ir">피그마 아이콘</span>
-          </a>
-          <a href="https://codepen.io/your-work" title="codepen" target="_blank" rel="noopener noreferrer">
-            <span className="ir">코드펜 아이콘</span>
-          </a>
-          <a
-            href="https://www.notion.so/PLANNING-1e1b35450c8e434b8c64ff434c1de74d"
-            title="notion"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="ir">노션 아이콘</span>
           </a>
         </div>
       </div>
