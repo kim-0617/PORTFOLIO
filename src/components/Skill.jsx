@@ -60,7 +60,8 @@ function Skill() {
           <div className="skill__conts__detail">
             <h3 className="skill__conts__detail__title">퍼블리싱</h3>
             <p className="skill__conts__detail__desc">
-              웹 표준에 따라 마크업이 가능하며, CSS의 여러 중요 속성들을 숙지하고 있으며 SCSS를 즐겨 사용합니다.
+              웹 표준에 따라 마크업이 가능하며, 상황에 맞는 적절한 시멘틱 태그를 사용합니다. CSS의 여러 중요 속성들을
+              숙지하고 있습니다.
             </p>
           </div>
           {/* 02 */}
@@ -78,7 +79,7 @@ function Skill() {
               REACT JS <br /> Nextjs
             </h3>
             <p className="skill__conts__detail__desc">
-              React hooks와 함수형 컴포넌트를 사용하여 프론트 개발에 능숙합니다.
+              React hooks와 함수형 컴포넌트를 사용하여 프론트 웹 개발에 능숙합니다.
             </p>
           </div>
           {/* 05 */}
