@@ -5,7 +5,7 @@ function Coding() {
   return (
     <section id="coding">
       <CodingIntro />
-      <CodingWork />
+      {/* <CodingWork /> */}
       <CodingWorkList />
     </section>
   );
